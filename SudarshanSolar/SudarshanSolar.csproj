@@ -1,0 +1,2674 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{51412166-C253-442A-9DD1-B3A48451FC0A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SudarshanSolar</RootNamespace>
+    <AssemblyName>SudarshanSolar</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=16.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.16.1.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GroupingView">
+      <HintPath>C:\Users\ANUVAAB\Desktop\solar\mysolarproject\Bin\GroupingView.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>C:\Users\ANUVAAB\Desktop\solar\mysolarproject\Bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LoadMore">
+      <HintPath>C:\Users\ANUVAAB\Desktop\solar\mysolarproject\Bin\LoadMore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="microsoft.office.interop.excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Users\ANUVAAB\Desktop\solar\mysolarproject\Bin\microsoft.office.interop.excel.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\ANUVAAB\Desktop\solar\mysolarproject\Bin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF5, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\ANUVAAB\Desktop\solar\mysolarproject\Bin\MySql.Data.Entity.EF5.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\ANUVAAB\Desktop\solar\mysolarproject\Bin\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Fabric.Plugin, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\ANUVAAB\Desktop\solar\mysolarproject\Bin\MySql.Fabric.Plugin.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\ANUVAAB\Desktop\solar\mysolarproject\Bin\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="App_Data\TextFile1.txt" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\Antlr3.Runtime.pdb" />
+    <Content Include="bin\AspNet.ScriptManager.bootstrap.dll" />
+    <Content Include="bin\AspNet.ScriptManager.jQuery.dll" />
+    <Content Include="bin\GroupingView.dll" />
+    <Content Include="bin\GroupingView.pdb" />
+    <Content Include="bin\itextsharp.dll" />
+    <Content Include="bin\LoadMore.dll" />
+    <Content Include="bin\Microsoft.AspNet.FriendlyUrls.dll" />
+    <Content Include="bin\Microsoft.AspNet.FriendlyUrls.xml" />
+    <Content Include="bin\Microsoft.AspNet.Web.Optimization.WebForms.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.ScriptManager.MSAjax.dll" />
+    <Content Include="bin\Microsoft.ScriptManager.WebForms.dll" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\MySql.Data.dll" />
+    <Content Include="bin\MySql.Data.Entity.EF5.dll" />
+    <Content Include="bin\MySql.Data.Entity.EF6.dll" />
+    <Content Include="bin\MySql.Fabric.Plugin.dll" />
+    <Content Include="bin\MySql.Web.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\SudarshanSolar.dll" />
+    <Content Include="bin\SudarshanSolar.pdb" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Optimization.xml" />
+    <Content Include="bin\WebGrease.dll" />
+    <Content Include="ChkLogin.aspx" />
+    <Content Include="Content\i\base\advanced\alertify.html" />
+    <Content Include="Content\i\base\advanced\animation.html" />
+    <Content Include="Content\i\base\advanced\bootbox-sweetalert.html" />
+    <Content Include="Content\i\base\advanced\context-menu.html" />
+    <Content Include="Content\i\base\advanced\highlight.html" />
+    <Content Include="Content\i\base\advanced\lightbox.html" />
+    <Content Include="Content\i\base\advanced\maps-google.html" />
+    <Content Include="Content\i\base\advanced\maps-vector.html" />
+    <Content Include="Content\i\base\advanced\masonry.html" />
+    <Content Include="Content\i\base\advanced\rating.html" />
+    <Content Include="Content\i\base\advanced\scrollable.html" />
+    <Content Include="Content\i\base\advanced\sortable-nestable.html" />
+    <Content Include="Content\i\base\advanced\toastr.html" />
+    <Content Include="Content\i\base\advanced\treeview.html" />
+    <Content Include="Content\i\base\apps\calendar\calendar.html" />
+    <Content Include="Content\i\base\apps\contacts\contacts.html" />
+    <Content Include="Content\i\base\apps\documents\article.html" />
+    <Content Include="Content\i\base\apps\documents\articles.html" />
+    <Content Include="Content\i\base\apps\documents\categories.html" />
+    <Content Include="Content\i\base\apps\forum\forum.html" />
+    <Content Include="Content\i\base\apps\location\location.html" />
+    <Content Include="Content\i\base\apps\mailbox\mailbox.html" />
+    <Content Include="Content\i\base\apps\media\overview.html" />
+    <Content Include="Content\i\base\apps\message\message.html" />
+    <Content Include="Content\i\base\apps\notebook\notebook.html" />
+    <Content Include="Content\i\base\apps\projects\projects.html" />
+    <Content Include="Content\i\base\apps\taskboard\taskboard.html" />
+    <Content Include="Content\i\base\apps\work\work.html" />
+    <Content Include="Content\i\base\assets\css\site.min.css" />
+    <Content Include="Content\i\base\assets\css\v2.2.css" />
+    <Content Include="Content\i\base\assets\examples\css\advanced\v2.2.css" />
+    <Content Include="Content\i\base\assets\examples\css\advanced\v2.2_2.css" />
+    <Content Include="Content\i\base\assets\examples\css\advanced\v2.2_3.css" />
+    <Content Include="Content\i\base\assets\examples\css\advanced\v2.2_4.css" />
+    <Content Include="Content\i\base\assets\examples\css\advanced\v2.2_5.css" />
+    <Content Include="Content\i\base\assets\examples\css\advanced\v2.2_6.css" />
+    <Content Include="Content\i\base\assets\examples\css\advanced\v2.2_7.css" />
+    <Content Include="Content\i\base\assets\examples\css\advanced\v2.2_8.css" />
+    <Content Include="Content\i\base\assets\examples\css\apps\v2.2.css" />
+    <Content Include="Content\i\base\assets\examples\css\apps\v2.2_10.css" />
+    <Content Include="Content\i\base\assets\examples\css\apps\v2.2_11.css" />
+    <Content Include="Content\i\base\assets\examples\css\apps\v2.2_12.css" />
+    <Content Include="Content\i\base\assets\examples\css\apps\v2.2_2.css" />
+    <Content Include="Content\i\base\assets\examples\css\apps\v2.2_3.css" />
+    <Content Include="Content\i\base\assets\examples\css\apps\v2.2_4.css" />
+    <Content Include="Content\i\base\assets\examples\css\apps\v2.2_5.css" />
+    <Content Include="Content\i\base\assets\examples\css\apps\v2.2_6.css" />
+    <Content Include="Content\i\base\assets\examples\css\apps\v2.2_7.css" />
+    <Content Include="Content\i\base\assets\examples\css\apps\v2.2_8.css" />
+    <Content Include="Content\i\base\assets\examples\css\apps\v2.2_9.css" />
+    <Content Include="Content\i\base\assets\examples\css\charts\v2.2.css" />
+    <Content Include="Content\i\base\assets\examples\css\charts\v2.2_2.css" />
+    <Content Include="Content\i\base\assets\examples\css\charts\v2.2_3.css" />
+    <Content Include="Content\i\base\assets\examples\css\charts\v2.2_4.css" />
+    <Content Include="Content\i\base\assets\examples\css\charts\v2.2_5.css" />
+    <Content Include="Content\i\base\assets\examples\css\dashboard\v2.2.css" />
+    <Content Include="Content\i\base\assets\examples\css\forms\v2.2.css" />
+    <Content Include="Content\i\base\assets\examples\css\forms\v2.2_2.css" />
+    <Content Include="Content\i\base\assets\examples\css\forms\v2.2_3.css" />
+    <Content Include="Content\i\base\assets\examples\css\forms\v2.2_4.css" />
+    <Content Include="Content\i\base\assets\examples\css\forms\v2.2_5.css" />
+    <Content Include="Content\i\base\assets\examples\css\layouts\v2.2.css" />
+    <Content Include="Content\i\base\assets\examples\css\layouts\v2.2_2.css" />
+    <Content Include="Content\i\base\assets\examples\css\pages\v2.2.css" />
+    <Content Include="Content\i\base\assets\examples\css\pages\v2.2_10.css" />
+    <Content Include="Content\i\base\assets\examples\css\pages\v2.2_11.css" />
+    <Content Include="Content\i\base\assets\examples\css\pages\v2.2_12.css" />
+    <Content Include="Content\i\base\assets\examples\css\pages\v2.2_13.css" />
+    <Content Include="Content\i\base\assets\examples\css\pages\v2.2_14.css" />
+    <Content Include="Content\i\base\assets\examples\css\pages\v2.2_15.css" />
+    <Content Include="Content\i\base\assets\examples\css\pages\v2.2_16.css" />
+    <Content Include="Content\i\base\assets\examples\css\pages\v2.2_17.css" />
+    <Content Include="Content\i\base\assets\examples\css\pages\v2.2_18.css" />
+    <Content Include="Content\i\base\assets\examples\css\pages\v2.2_19.css" />
+    <Content Include="Content\i\base\assets\examples\css\pages\v2.2_2.css" />
+    <Content Include="Content\i\base\assets\examples\css\pages\v2.2_20.css" />
+    <Content Include="Content\i\base\assets\examples\css\pages\v2.2_3.css" />
+    <Content Include="Content\i\base\assets\examples\css\pages\v2.2_4.css" />
+    <Content Include="Content\i\base\assets\examples\css\pages\v2.2_5.css" />
+    <Content Include="Content\i\base\assets\examples\css\pages\v2.2_6.css" />
+    <Content Include="Content\i\base\assets\examples\css\pages\v2.2_7.css" />
+    <Content Include="Content\i\base\assets\examples\css\pages\v2.2_8.css" />
+    <Content Include="Content\i\base\assets\examples\css\pages\v2.2_9.css" />
+    <Content Include="Content\i\base\assets\examples\css\structure\v2.2.css" />
+    <Content Include="Content\i\base\assets\examples\css\structure\v2.2_2.css" />
+    <Content Include="Content\i\base\assets\examples\css\structure\v2.2_3.css" />
+    <Content Include="Content\i\base\assets\examples\css\structure\v2.2_4.css" />
+    <Content Include="Content\i\base\assets\examples\css\structure\v2.2_5.css" />
+    <Content Include="Content\i\base\assets\examples\css\structure\v2.2_6.css" />
+    <Content Include="Content\i\base\assets\examples\css\structure\v2.2_7.css" />
+    <Content Include="Content\i\base\assets\examples\css\structure\v2.2_8.css" />
+    <Content Include="Content\i\base\assets\examples\css\tables\v2.2.css" />
+    <Content Include="Content\i\base\assets\examples\css\tables\v2.2_2.css" />
+    <Content Include="Content\i\base\assets\examples\css\uikit\v2.2.css" />
+    <Content Include="Content\i\base\assets\examples\css\uikit\v2.2_10.css" />
+    <Content Include="Content\i\base\assets\examples\css\uikit\v2.2_11.css" />
+    <Content Include="Content\i\base\assets\examples\css\uikit\v2.2_12.css" />
+    <Content Include="Content\i\base\assets\examples\css\uikit\v2.2_2.css" />
+    <Content Include="Content\i\base\assets\examples\css\uikit\v2.2_3.css" />
+    <Content Include="Content\i\base\assets\examples\css\uikit\v2.2_4.css" />
+    <Content Include="Content\i\base\assets\examples\css\uikit\v2.2_5.css" />
+    <Content Include="Content\i\base\assets\examples\css\uikit\v2.2_6.css" />
+    <Content Include="Content\i\base\assets\examples\css\uikit\v2.2_7.css" />
+    <Content Include="Content\i\base\assets\examples\css\uikit\v2.2_8.css" />
+    <Content Include="Content\i\base\assets\examples\css\uikit\v2.2_9.css" />
+    <Content Include="Content\i\base\assets\examples\css\widgets\v2.2.css" />
+    <Content Include="Content\i\base\assets\examples\css\widgets\v2.2_2.css" />
+    <Content Include="Content\i\base\assets\examples\css\widgets\v2.2_3.css" />
+    <Content Include="Content\i\base\assets\examples\css\widgets\v2.2_4.css" />
+    <Content Include="Content\i\base\assets\examples\css\widgets\v2.2_5.css" />
+    <Content Include="Content\i\base\assets\examples\images\dashboard-header.jpg" />
+    <Content Include="Content\i\base\assets\examples\images\modal\accordion-modal.png" />
+    <Content Include="Content\i\base\assets\examples\images\modal\fillin-modal.png" />
+    <Content Include="Content\i\base\assets\examples\images\modal\form-modal.png" />
+    <Content Include="Content\i\base\assets\examples\images\modal\grid-modal.png" />
+    <Content Include="Content\i\base\assets\examples\images\modal\modal-position-sidebar.png" />
+    <Content Include="Content\i\base\assets\examples\images\modal\modal-position.png" />
+    <Content Include="Content\i\base\assets\examples\images\modal\multiple-modal.png" />
+    <Content Include="Content\i\base\assets\examples\images\modal\size-modal.png" />
+    <Content Include="Content\i\base\assets\examples\images\modal\style-modal.png" />
+    <Content Include="Content\i\base\assets\examples\images\modal\sweet-alert.png" />
+    <Content Include="Content\i\base\assets\examples\images\modal\tab-modal.png" />
+    <Content Include="Content\i\base\assets\examples\images\navbar\fixed-to-bottom.png" />
+    <Content Include="Content\i\base\assets\examples\images\navbar\fixed-to-top.png" />
+    <Content Include="Content\i\base\assets\examples\js\advanced\animation.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\advanced\bootbox-sweetalert.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\advanced\context-menu.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\advanced\highlight.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\advanced\lightbox.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\advanced\maps-google.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\advanced\scrollable.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\advanced\treeview.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\apps\calendar.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\apps\contacts.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\apps\documents.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\apps\forum.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\apps\location.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\apps\mailbox.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\apps\media.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\apps\message.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\apps\notebook.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\apps\projects.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\apps\taskboard.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\apps\work.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\charts\c3.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\charts\chartist.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\charts\chartjs.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\charts\flot.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\charts\gauges.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\charts\morris.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\charts\peity.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\charts\pie-progress.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\charts\rickshaw.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\charts\sparkline.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\dashboard\v1.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\forms\advanced.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\forms\editable.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\forms\editor-summernote.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\forms\image-cropping.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\forms\uploads.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\forms\validation.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\forms\wizard.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\layouts\panel-transition.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\pages\code-editor.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\pages\faq.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\pages\gallery.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\pages\map-google.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\pages\map-vector.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\structure\timeline.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\tables\bootstrap.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\tables\datatable.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\tables\editable.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\tables\footable.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\tables\jsgrid-db.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\tables\jsgrid.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\uikit\button.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\uikit\carousel.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\uikit\dropdown.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\uikit\icon.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\uikit\list.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\uikit\panel-actions.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\uikit\panel-structure.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\uikit\progress-bars.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\uikit\tooltip-popover.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\widgets\chart.min.js" />
+    <Content Include="Content\i\base\assets\examples\js\widgets\weather.min.js" />
+    <Content Include="Content\i\base\assets\images\apple-touch-icon.png" />
+    <Content Include="Content\i\base\assets\images\favicon.ico" />
+    <Content Include="Content\i\base\assets\images\logo%402x.png" />
+    <Content Include="Content\i\base\assets\images\logo-blue%402x.png" />
+    <Content Include="Content\i\base\assets\images\logo-blue.png" />
+    <Content Include="Content\i\base\assets\images\logo.png" />
+    <Content Include="Content\i\base\assets\js\app.min.js" />
+    <Content Include="Content\i\base\assets\js\configs\config-tour.min.js" />
+    <Content Include="Content\i\base\assets\js\sections\gridmenu.min.js" />
+    <Content Include="Content\i\base\assets\js\sections\menu.min.js" />
+    <Content Include="Content\i\base\assets\js\sections\menubar.min.js" />
+    <Content Include="Content\i\base\assets\js\sections\sidebar.min.js" />
+    <Content Include="Content\i\base\assets\js\sections\skintools.min.js" />
+    <Content Include="Content\i\base\assets\js\site.min.js" />
+    <Content Include="Content\i\base\charts\c3.html" />
+    <Content Include="Content\i\base\charts\chartist.html" />
+    <Content Include="Content\i\base\charts\chartjs.html" />
+    <Content Include="Content\i\base\charts\flot.html" />
+    <Content Include="Content\i\base\charts\gauges.html" />
+    <Content Include="Content\i\base\charts\morris.html" />
+    <Content Include="Content\i\base\charts\peity.html" />
+    <Content Include="Content\i\base\charts\pie-progress.html" />
+    <Content Include="Content\i\base\charts\rickshaw.html" />
+    <Content Include="Content\i\base\charts\sparkline.html" />
+    <Content Include="Content\i\base\forms\advanced.html" />
+    <Content Include="Content\i\base\forms\editable.html" />
+    <Content Include="Content\i\base\forms\editor-ace.html" />
+    <Content Include="Content\i\base\forms\editor-markdown.html" />
+    <Content Include="Content\i\base\forms\editor-summernote.html" />
+    <Content Include="Content\i\base\forms\file-uploads.html" />
+    <Content Include="Content\i\base\forms\general.html" />
+    <Content Include="Content\i\base\forms\image-cropping.html" />
+    <Content Include="Content\i\base\forms\layouts.html" />
+    <Content Include="Content\i\base\forms\masks.html" />
+    <Content Include="Content\i\base\forms\material.html" />
+    <Content Include="Content\i\base\forms\validation.html" />
+    <Content Include="Content\i\base\forms\wizard.html" />
+    <Content Include="Content\i\base\index.html" />
+    <Content Include="Content\i\base\layouts\bordered-header.html" />
+    <Content Include="Content\i\base\layouts\boxed.html" />
+    <Content Include="Content\i\base\layouts\grids.html" />
+    <Content Include="Content\i\base\layouts\headers.html" />
+    <Content Include="Content\i\base\layouts\layout-grid.html" />
+    <Content Include="Content\i\base\layouts\menu-collapsed.html" />
+    <Content Include="Content\i\base\layouts\menu-expended.html" />
+    <Content Include="Content\i\base\layouts\menubar-flipped.html" />
+    <Content Include="Content\i\base\layouts\menubar-native-scrolling.html" />
+    <Content Include="Content\i\base\layouts\page-aside-fixed.html" />
+    <Content Include="Content\i\base\layouts\panel-transition.html" />
+    <Content Include="Content\i\base\layouts\two-columns.html" />
+    <Content Include="Content\i\base\Material-Design-Iconic-Font.svg" />
+    <Content Include="Content\i\base\pages\blank.html" />
+    <Content Include="Content\i\base\pages\code-editor.html" />
+    <Content Include="Content\i\base\pages\email.html" />
+    <Content Include="Content\i\base\pages\error-400.html" />
+    <Content Include="Content\i\base\pages\error-403.html" />
+    <Content Include="Content\i\base\pages\error-404.html" />
+    <Content Include="Content\i\base\pages\error-500.html" />
+    <Content Include="Content\i\base\pages\error-503.html" />
+    <Content Include="Content\i\base\pages\faq.html" />
+    <Content Include="Content\i\base\pages\forgot-password.html" />
+    <Content Include="Content\i\base\pages\gallery-grid.html" />
+    <Content Include="Content\i\base\pages\gallery.html" />
+    <Content Include="Content\i\base\pages\invoice.html" />
+    <Content Include="Content\i\base\pages\lockscreen.html" />
+    <Content Include="Content\i\base\pages\login-v2.html" />
+    <Content Include="Content\i\base\pages\login-v3.html" />
+    <Content Include="Content\i\base\pages\login.html" />
+    <Content Include="Content\i\base\pages\maintenance.html" />
+    <Content Include="Content\i\base\pages\map-google.html" />
+    <Content Include="Content\i\base\pages\map-vector.html" />
+    <Content Include="Content\i\base\pages\profile.html" />
+    <Content Include="Content\i\base\pages\register-v2.html" />
+    <Content Include="Content\i\base\pages\register-v3.html" />
+    <Content Include="Content\i\base\pages\register.html" />
+    <Content Include="Content\i\base\pages\search-result.html" />
+    <Content Include="Content\i\base\pages\site-map.html" />
+    <Content Include="Content\i\base\pages\user.html" />
+    <Content Include="Content\i\base\structure\alerts.html" />
+    <Content Include="Content\i\base\structure\blockquotes.html" />
+    <Content Include="Content\i\base\structure\breadcrumbs.html" />
+    <Content Include="Content\i\base\structure\chat.html" />
+    <Content Include="Content\i\base\structure\comments.html" />
+    <Content Include="Content\i\base\structure\cover.html" />
+    <Content Include="Content\i\base\structure\media.html" />
+    <Content Include="Content\i\base\structure\nav.html" />
+    <Content Include="Content\i\base\structure\navbars.html" />
+    <Content Include="Content\i\base\structure\overlay.html" />
+    <Content Include="Content\i\base\structure\pagination.html" />
+    <Content Include="Content\i\base\structure\pricing-tables.html" />
+    <Content Include="Content\i\base\structure\ribbon.html" />
+    <Content Include="Content\i\base\structure\step.html" />
+    <Content Include="Content\i\base\structure\testimonials.html" />
+    <Content Include="Content\i\base\structure\timeline-simple.html" />
+    <Content Include="Content\i\base\structure\timeline.html" />
+    <Content Include="Content\i\base\tables\basic.html" />
+    <Content Include="Content\i\base\tables\bootstrap.html" />
+    <Content Include="Content\i\base\tables\datatable.html" />
+    <Content Include="Content\i\base\tables\editable.html" />
+    <Content Include="Content\i\base\tables\floatthead.html" />
+    <Content Include="Content\i\base\tables\footable.html" />
+    <Content Include="Content\i\base\tables\jsgrid.html" />
+    <Content Include="Content\i\base\tables\responsive.html" />
+    <Content Include="Content\i\base\uikit\badges-labels.html" />
+    <Content Include="Content\i\base\uikit\buttons.html" />
+    <Content Include="Content\i\base\uikit\carousel.html" />
+    <Content Include="Content\i\base\uikit\colors.html" />
+    <Content Include="Content\i\base\uikit\dropdowns.html" />
+    <Content Include="Content\i\base\uikit\icons.html" />
+    <Content Include="Content\i\base\uikit\icons\7-stroke.html" />
+    <Content Include="Content\i\base\uikit\icons\brand-icons.html" />
+    <Content Include="Content\i\base\uikit\icons\font-awesome.html" />
+    <Content Include="Content\i\base\uikit\icons\glyphicons.html" />
+    <Content Include="Content\i\base\uikit\icons\ionicons.html" />
+    <Content Include="Content\i\base\uikit\icons\material-design.html" />
+    <Content Include="Content\i\base\uikit\icons\mfglabs.html" />
+    <Content Include="Content\i\base\uikit\icons\octicons.html" />
+    <Content Include="Content\i\base\uikit\icons\open-iconic.html" />
+    <Content Include="Content\i\base\uikit\icons\themify.html" />
+    <Content Include="Content\i\base\uikit\icons\weather-icons.html" />
+    <Content Include="Content\i\base\uikit\icons\web-icons.html" />
+    <Content Include="Content\i\base\uikit\images.html" />
+    <Content Include="Content\i\base\uikit\list.html" />
+    <Content Include="Content\i\base\uikit\modals.html" />
+    <Content Include="Content\i\base\uikit\panel-actions.html" />
+    <Content Include="Content\i\base\uikit\panel-portlets.html" />
+    <Content Include="Content\i\base\uikit\panel-structure.html" />
+    <Content Include="Content\i\base\uikit\progress-bars.html" />
+    <Content Include="Content\i\base\uikit\tabs-accordions.html" />
+    <Content Include="Content\i\base\uikit\tooltip-popover.html" />
+    <Content Include="Content\i\base\uikit\typography.html" />
+    <Content Include="Content\i\base\uikit\utilities.html" />
+    <Content Include="Content\i\base\widgets\blog.html" />
+    <Content Include="Content\i\base\widgets\chart.html" />
+    <Content Include="Content\i\base\widgets\data.html" />
+    <Content Include="Content\i\base\widgets\social.html" />
+    <Content Include="Content\i\base\widgets\statistics.html" />
+    <Content Include="Content\i\base\widgets\weather.html" />
+    <Content Include="Content\i\global\css\bootstrap-extend.min.css" />
+    <Content Include="Content\i\global\css\bootstrap.min.css" />
+    <Content Include="Content\i\global\css\v2.2.css" />
+    <Content Include="Content\i\global\css\v2.2_2.css" />
+    <Content Include="Content\i\global\css\v2.2_3.css" />
+    <Content Include="Content\i\global\fonts\7-stroke\v2.2.css" />
+    <Content Include="Content\i\global\fonts\brand-icons\brand-icons.svg" />
+    <Content Include="Content\i\global\fonts\brand-icons\v2.2.css" />
+    <Content Include="Content\i\global\fonts\font-awesome\v2.2.css" />
+    <Content Include="Content\i\global\fonts\glyphicons\v2.2.css" />
+    <Content Include="Content\i\global\fonts\ionicons\v2.2.css" />
+    <Content Include="Content\i\global\fonts\material-design\Material-Design-Iconic-Font.svg" />
+    <Content Include="Content\i\global\fonts\material-design\v2.2.css" />
+    <Content Include="Content\i\global\fonts\mfglabs\v2.2.css" />
+    <Content Include="Content\i\global\fonts\octicons\v2.2.css" />
+    <Content Include="Content\i\global\fonts\open-iconic\v2.2.css" />
+    <Content Include="Content\i\global\fonts\themify\v2.2.css" />
+    <Content Include="Content\i\global\fonts\weather-icons\v2.2.css" />
+    <Content Include="Content\i\global\fonts\web-icons\v2.2.css" />
+    <Content Include="Content\i\global\js\components\ace.min.js" />
+    <Content Include="Content\i\global\js\components\alertify-js.min.js" />
+    <Content Include="Content\i\global\js\components\animate-list.min.js" />
+    <Content Include="Content\i\global\js\components\animsition.min.js" />
+    <Content Include="Content\i\global\js\components\asbreadcrumbs.min.js" />
+    <Content Include="Content\i\global\js\components\ascolorpicker.min.js" />
+    <Content Include="Content\i\global\js\components\aspaginator.min.js" />
+    <Content Include="Content\i\global\js\components\aspieprogress.min.js" />
+    <Content Include="Content\i\global\js\components\asprogress.min.js" />
+    <Content Include="Content\i\global\js\components\asrange.min.js" />
+    <Content Include="Content\i\global\js\components\asscrollable.min.js" />
+    <Content Include="Content\i\global\js\components\asspinner.min.js" />
+    <Content Include="Content\i\global\js\components\bootbox.min.js" />
+    <Content Include="Content\i\global\js\components\bootstrap-datepicker.min.js" />
+    <Content Include="Content\i\global\js\components\bootstrap-maxlength.min.js" />
+    <Content Include="Content\i\global\js\components\bootstrap-select.min.js" />
+    <Content Include="Content\i\global\js\components\bootstrap-sweetalert.min.js" />
+    <Content Include="Content\i\global\js\components\bootstrap-tagsinput.min.js" />
+    <Content Include="Content\i\global\js\components\bootstrap-tokenfield.min.js" />
+    <Content Include="Content\i\global\js\components\bootstrap-touchspin.min.js" />
+    <Content Include="Content\i\global\js\components\bootstrap-treeview.min.js" />
+    <Content Include="Content\i\global\js\components\buttons.min.js" />
+    <Content Include="Content\i\global\js\components\card.min.js" />
+    <Content Include="Content\i\global\js\components\clockpicker.min.js" />
+    <Content Include="Content\i\global\js\components\datatables.min.js" />
+    <Content Include="Content\i\global\js\components\datepair-js.min.js" />
+    <Content Include="Content\i\global\js\components\dropify.min.js" />
+    <Content Include="Content\i\global\js\components\editable-table.min.js" />
+    <Content Include="Content\i\global\js\components\filterable.min.js" />
+    <Content Include="Content\i\global\js\components\formatter-js.min.js" />
+    <Content Include="Content\i\global\js\components\gauge-js.min.js" />
+    <Content Include="Content\i\global\js\components\gmaps.min.js" />
+    <Content Include="Content\i\global\js\components\gridstack.min.js" />
+    <Content Include="Content\i\global\js\components\highlight-js.min.js" />
+    <Content Include="Content\i\global\js\components\html5sortable.min.js" />
+    <Content Include="Content\i\global\js\components\icheck.min.js" />
+    <Content Include="Content\i\global\js\components\input-group-file.min.js" />
+    <Content Include="Content\i\global\js\components\jquery-appear.min.js" />
+    <Content Include="Content\i\global\js\components\jquery-floatthead.min.js" />
+    <Content Include="Content\i\global\js\components\jquery-knob.min.js" />
+    <Content Include="Content\i\global\js\components\jquery-labelauty.min.js" />
+    <Content Include="Content\i\global\js\components\jquery-placeholder.min.js" />
+    <Content Include="Content\i\global\js\components\jquery-strength.min.js" />
+    <Content Include="Content\i\global\js\components\jquery-wizard.min.js" />
+    <Content Include="Content\i\global\js\components\jt-timepicker.min.js" />
+    <Content Include="Content\i\global\js\components\jvectormap.min.js" />
+    <Content Include="Content\i\global\js\components\ladda-bootstrap.min.js" />
+    <Content Include="Content\i\global\js\components\magnific-popup.min.js" />
+    <Content Include="Content\i\global\js\components\masonry.min.js" />
+    <Content Include="Content\i\global\js\components\matchheight.min.js" />
+    <Content Include="Content\i\global\js\components\material.min.js" />
+    <Content Include="Content\i\global\js\components\multi-select.min.js" />
+    <Content Include="Content\i\global\js\components\nestable.min.js" />
+    <Content Include="Content\i\global\js\components\nprogress.min.js" />
+    <Content Include="Content\i\global\js\components\owl-carousel.min.js" />
+    <Content Include="Content\i\global\js\components\panel.min.js" />
+    <Content Include="Content\i\global\js\components\peity.min.js" />
+    <Content Include="Content\i\global\js\components\plyr.min.js" />
+    <Content Include="Content\i\global\js\components\raty.min.js" />
+    <Content Include="Content\i\global\js\components\select2.min.js" />
+    <Content Include="Content\i\global\js\components\selectable.min.js" />
+    <Content Include="Content\i\global\js\components\slidepanel.min.js" />
+    <Content Include="Content\i\global\js\components\summernote.min.js" />
+    <Content Include="Content\i\global\js\components\switchery.min.js" />
+    <Content Include="Content\i\global\js\components\table.min.js" />
+    <Content Include="Content\i\global\js\components\tabs.min.js" />
+    <Content Include="Content\i\global\js\components\tasklist.min.js" />
+    <Content Include="Content\i\global\js\components\toastr.min.js" />
+    <Content Include="Content\i\global\js\components\toolbar.min.js" />
+    <Content Include="Content\i\global\js\components\webui-popover.min.js" />
+    <Content Include="Content\i\global\js\configs\config-colors.min.js" />
+    <Content Include="Content\i\global\js\core.min.js" />
+    <Content Include="Content\i\global\js\plugins\action-btn.min.js" />
+    <Content Include="Content\i\global\js\plugins\closeable-tabs.min.js" />
+    <Content Include="Content\i\global\js\plugins\responsive-tabs.min.js" />
+    <Content Include="Content\i\global\js\plugins\selectable.min.js" />
+    <Content Include="Content\i\global\js\plugins\sticky-header.min.js" />
+    <Content Include="Content\i\global\photos\animal-1-240x160.jpg" />
+    <Content Include="Content\i\global\photos\animal-1-720x480.jpg" />
+    <Content Include="Content\i\global\photos\animal-1-960x640.jpg" />
+    <Content Include="Content\i\global\photos\animal-2-240x160.jpg" />
+    <Content Include="Content\i\global\photos\animal-2-960x640.jpg" />
+    <Content Include="Content\i\global\photos\animal-3-240x160.jpg" />
+    <Content Include="Content\i\global\photos\animal-3-720x480.jpg" />
+    <Content Include="Content\i\global\photos\animal-4-240x160.jpg" />
+    <Content Include="Content\i\global\photos\animal-4-960x640.jpg" />
+    <Content Include="Content\i\global\photos\animal-5-240x160.jpg" />
+    <Content Include="Content\i\global\photos\animal-5-720x480.jpg" />
+    <Content Include="Content\i\global\photos\city-1-720x480.jpg" />
+    <Content Include="Content\i\global\photos\city-1-960x640.jpg" />
+    <Content Include="Content\i\global\photos\city-2-720x480.jpg" />
+    <Content Include="Content\i\global\photos\city-2-960x640.jpg" />
+    <Content Include="Content\i\global\photos\city-3-720x480.jpg" />
+    <Content Include="Content\i\global\photos\city-3-960x640.jpg" />
+    <Content Include="Content\i\global\photos\city-4-720x480.jpg" />
+    <Content Include="Content\i\global\photos\city-4-960x640.jpg" />
+    <Content Include="Content\i\global\photos\city-5-720x480.jpg" />
+    <Content Include="Content\i\global\photos\city-5-960x640.jpg" />
+    <Content Include="Content\i\global\photos\city-6-960x640.jpg" />
+    <Content Include="Content\i\global\photos\city-7-960x480.jpg" />
+    <Content Include="Content\i\global\photos\city-7-960x640.jpg" />
+    <Content Include="Content\i\global\photos\city-8-960x640.jpg" />
+    <Content Include="Content\i\global\photos\city-9-960x640.jpg" />
+    <Content Include="Content\i\global\photos\focus-1-320x213.jpg" />
+    <Content Include="Content\i\global\photos\focus-1-480x320.jpg" />
+    <Content Include="Content\i\global\photos\focus-1-720x480.jpg" />
+    <Content Include="Content\i\global\photos\focus-1-960x640.jpg" />
+    <Content Include="Content\i\global\photos\focus-2-320x213.jpg" />
+    <Content Include="Content\i\global\photos\focus-2-480x320.jpg" />
+    <Content Include="Content\i\global\photos\focus-2-720x480.jpg" />
+    <Content Include="Content\i\global\photos\focus-2-960x640.jpg" />
+    <Content Include="Content\i\global\photos\focus-3-320x213.jpg" />
+    <Content Include="Content\i\global\photos\focus-3-480x320.jpg" />
+    <Content Include="Content\i\global\photos\focus-3-720x480.jpg" />
+    <Content Include="Content\i\global\photos\focus-3-960x640.jpg" />
+    <Content Include="Content\i\global\photos\focus-4-320x213.jpg" />
+    <Content Include="Content\i\global\photos\focus-4-960x640.jpg" />
+    <Content Include="Content\i\global\photos\focus-5-960x640.jpg" />
+    <Content Include="Content\i\global\photos\focus-6-240x240.jpg" />
+    <Content Include="Content\i\global\photos\focus-6-960x640.jpg" />
+    <Content Include="Content\i\global\photos\focus-7-240x240.jpg" />
+    <Content Include="Content\i\global\photos\focus-7-960x640.jpg" />
+    <Content Include="Content\i\global\photos\focus-8-240x240.jpg" />
+    <Content Include="Content\i\global\photos\focus-8-960x640.jpg" />
+    <Content Include="Content\i\global\photos\object-1-240x160.jpg" />
+    <Content Include="Content\i\global\photos\object-1-720x480.jpg" />
+    <Content Include="Content\i\global\photos\object-1-960x640.jpg" />
+    <Content Include="Content\i\global\photos\object-2-240x160.jpg" />
+    <Content Include="Content\i\global\photos\object-2-720x480.jpg" />
+    <Content Include="Content\i\global\photos\object-2-960x640.jpg" />
+    <Content Include="Content\i\global\photos\object-3-240x160.jpg" />
+    <Content Include="Content\i\global\photos\object-3-720x480.jpg" />
+    <Content Include="Content\i\global\photos\object-3-960x640.jpg" />
+    <Content Include="Content\i\global\photos\object-4-240x160.jpg" />
+    <Content Include="Content\i\global\photos\object-4-720x480.jpg" />
+    <Content Include="Content\i\global\photos\object-4-960x640.jpg" />
+    <Content Include="Content\i\global\photos\object-5-240x160.jpg" />
+    <Content Include="Content\i\global\photos\object-5-720x480.jpg" />
+    <Content Include="Content\i\global\photos\object-5-960x640.jpg" />
+    <Content Include="Content\i\global\photos\object-6-240x160.jpg" />
+    <Content Include="Content\i\global\photos\object-6-720x480.jpg" />
+    <Content Include="Content\i\global\photos\object-6-960x640.jpg" />
+    <Content Include="Content\i\global\photos\people-2-960x640.jpg" />
+    <Content Include="Content\i\global\photos\people-3-960x640.jpg" />
+    <Content Include="Content\i\global\photos\people-4-960x640.jpg" />
+    <Content Include="Content\i\global\photos\people-5-960x640.jpg" />
+    <Content Include="Content\i\global\photos\people-7-960x640.jpg" />
+    <Content Include="Content\i\global\photos\view-1-1200x800.jpg" />
+    <Content Include="Content\i\global\photos\view-1-150x100.jpg" />
+    <Content Include="Content\i\global\photos\view-1-240x160.jpg" />
+    <Content Include="Content\i\global\photos\view-1-960x640.jpg" />
+    <Content Include="Content\i\global\photos\view-10-960x640.jpg" />
+    <Content Include="Content\i\global\photos\view-11-960x640.jpg" />
+    <Content Include="Content\i\global\photos\view-12-960x640.jpg" />
+    <Content Include="Content\i\global\photos\view-13-960x640.jpg" />
+    <Content Include="Content\i\global\photos\view-14-960x640.jpg" />
+    <Content Include="Content\i\global\photos\view-15-960x640.jpg" />
+    <Content Include="Content\i\global\photos\view-2-150x100.jpg" />
+    <Content Include="Content\i\global\photos\view-2-240x160.jpg" />
+    <Content Include="Content\i\global\photos\view-2-960x640.jpg" />
+    <Content Include="Content\i\global\photos\view-3-150x100.jpg" />
+    <Content Include="Content\i\global\photos\view-3-240x160.jpg" />
+    <Content Include="Content\i\global\photos\view-3-960x640.jpg" />
+    <Content Include="Content\i\global\photos\view-4-150x100.jpg" />
+    <Content Include="Content\i\global\photos\view-4-240x160.jpg" />
+    <Content Include="Content\i\global\photos\view-4-960x640.jpg" />
+    <Content Include="Content\i\global\photos\view-5-150x100.jpg" />
+    <Content Include="Content\i\global\photos\view-5-240x160.jpg" />
+    <Content Include="Content\i\global\photos\view-5-960x640.jpg" />
+    <Content Include="Content\i\global\photos\view-6-150x100.jpg" />
+    <Content Include="Content\i\global\photos\view-6-240x160.jpg" />
+    <Content Include="Content\i\global\photos\view-6-960x640.jpg" />
+    <Content Include="Content\i\global\photos\view-7-150x100.jpg" />
+    <Content Include="Content\i\global\photos\view-7-240x160.jpg" />
+    <Content Include="Content\i\global\photos\view-7-960x640.jpg" />
+    <Content Include="Content\i\global\photos\view-8-150x100.jpg" />
+    <Content Include="Content\i\global\photos\view-8-240x160.jpg" />
+    <Content Include="Content\i\global\photos\view-8-960x640.jpg" />
+    <Content Include="Content\i\global\photos\view-9-240x160.jpg" />
+    <Content Include="Content\i\global\photos\view-9-960x640.jpg" />
+    <Content Include="Content\i\global\portraits\1.jpg" />
+    <Content Include="Content\i\global\portraits\10.jpg" />
+    <Content Include="Content\i\global\portraits\11.jpg" />
+    <Content Include="Content\i\global\portraits\12.jpg" />
+    <Content Include="Content\i\global\portraits\13.jpg" />
+    <Content Include="Content\i\global\portraits\14.jpg" />
+    <Content Include="Content\i\global\portraits\15.jpg" />
+    <Content Include="Content\i\global\portraits\16.jpg" />
+    <Content Include="Content\i\global\portraits\17.jpg" />
+    <Content Include="Content\i\global\portraits\18.jpg" />
+    <Content Include="Content\i\global\portraits\19.jpg" />
+    <Content Include="Content\i\global\portraits\2.jpg" />
+    <Content Include="Content\i\global\portraits\20.jpg" />
+    <Content Include="Content\i\global\portraits\3.jpg" />
+    <Content Include="Content\i\global\portraits\4.jpg" />
+    <Content Include="Content\i\global\portraits\5.jpg" />
+    <Content Include="Content\i\global\portraits\6.jpg" />
+    <Content Include="Content\i\global\portraits\7.jpg" />
+    <Content Include="Content\i\global\portraits\8.jpg" />
+    <Content Include="Content\i\global\portraits\9.jpg" />
+    <Content Include="Content\i\global\vendor\ace\ace.js" />
+    <Content Include="Content\i\global\vendor\ace\v2.2.css" />
+    <Content Include="Content\i\global\vendor\alertify-js\alertify.js" />
+    <Content Include="Content\i\global\vendor\alertify-js\v2.2.css" />
+    <Content Include="Content\i\global\vendor\animsition\animsition.min.js" />
+    <Content Include="Content\i\global\vendor\animsition\v2.2.css" />
+    <Content Include="Content\i\global\vendor\asbreadcrumbs\jquery-asBreadcrumbs.min.js" />
+    <Content Include="Content\i\global\vendor\ascolorpicker\jquery-asColorPicker.min.js" />
+    <Content Include="Content\i\global\vendor\ascolorpicker\v2.2.css" />
+    <Content Include="Content\i\global\vendor\ascolor\jquery-asColor.min.js" />
+    <Content Include="Content\i\global\vendor\asgradient\jquery-asGradient.min.js" />
+    <Content Include="Content\i\global\vendor\ashoverscroll\jquery-asHoverScroll.min.js" />
+    <Content Include="Content\i\global\vendor\aspaginator\jquery.asPaginator.min.js" />
+    <Content Include="Content\i\global\vendor\aspieprogress\jquery-asPieProgress.min.js" />
+    <Content Include="Content\i\global\vendor\aspieprogress\v2.2.css" />
+    <Content Include="Content\i\global\vendor\asprogress\jquery-asProgress.min.js" />
+    <Content Include="Content\i\global\vendor\asrange\jquery-asRange.min.js" />
+    <Content Include="Content\i\global\vendor\asrange\v2.2.css" />
+    <Content Include="Content\i\global\vendor\asscrollable\jquery.asScrollable.all.min.js" />
+    <Content Include="Content\i\global\vendor\asscrollable\v2.2.css" />
+    <Content Include="Content\i\global\vendor\asscroll\jquery-asScroll.min.js" />
+    <Content Include="Content\i\global\vendor\asspinner\jquery-asSpinner.min.js" />
+    <Content Include="Content\i\global\vendor\asspinner\v2.2.css" />
+    <Content Include="Content\i\global\vendor\autosize\autosize.min.js" />
+    <Content Include="Content\i\global\vendor\blueimp-canvas-to-blob\canvas-to-blob.min.js" />
+    <Content Include="Content\i\global\vendor\blueimp-file-upload\jquery.fileupload-audio.js" />
+    <Content Include="Content\i\global\vendor\blueimp-file-upload\jquery.fileupload-image.js" />
+    <Content Include="Content\i\global\vendor\blueimp-file-upload\jquery.fileupload-process.js" />
+    <Content Include="Content\i\global\vendor\blueimp-file-upload\jquery.fileupload-ui.js" />
+    <Content Include="Content\i\global\vendor\blueimp-file-upload\jquery.fileupload-validate.js" />
+    <Content Include="Content\i\global\vendor\blueimp-file-upload\jquery.fileupload-video.js" />
+    <Content Include="Content\i\global\vendor\blueimp-file-upload\jquery.fileupload.js" />
+    <Content Include="Content\i\global\vendor\blueimp-file-upload\v2.2.css" />
+    <Content Include="Content\i\global\vendor\blueimp-load-image\load-image.all.min.js" />
+    <Content Include="Content\i\global\vendor\blueimp-tmpl\tmpl.min.js" />
+    <Content Include="Content\i\global\vendor\bootbox\bootbox.js" />
+    <Content Include="Content\i\global\vendor\bootstrap-contextmenu\bootstrap-contextmenu.js" />
+    <Content Include="Content\i\global\vendor\bootstrap-datepicker\bootstrap-datepicker.min.js" />
+    <Content Include="Content\i\global\vendor\bootstrap-datepicker\v2.2.css" />
+    <Content Include="Content\i\global\vendor\bootstrap-hover-dropdown\bootstrap-hover-dropdown.min.js" />
+    <Content Include="Content\i\global\vendor\bootstrap-markdown\bootstrap-markdown.js" />
+    <Content Include="Content\i\global\vendor\bootstrap-markdown\v2.2.css" />
+    <Content Include="Content\i\global\vendor\bootstrap-maxlength\bootstrap-maxlength.min.js" />
+    <Content Include="Content\i\global\vendor\bootstrap-maxlength\v2.2.css" />
+    <Content Include="Content\i\global\vendor\bootstrap-select\bootstrap-select.min.js" />
+    <Content Include="Content\i\global\vendor\bootstrap-select\v2.2.css" />
+    <Content Include="Content\i\global\vendor\bootstrap-sweetalert\sweet-alert.min.js" />
+    <Content Include="Content\i\global\vendor\bootstrap-sweetalert\v2.2.css" />
+    <Content Include="Content\i\global\vendor\bootstrap-table\bootstrap-table.min.js" />
+    <Content Include="Content\i\global\vendor\bootstrap-table\extensions\mobile\bootstrap-table-mobile.min.js" />
+    <Content Include="Content\i\global\vendor\bootstrap-table\v2.2.css" />
+    <Content Include="Content\i\global\vendor\bootstrap-tagsinput\bootstrap-tagsinput.min.js" />
+    <Content Include="Content\i\global\vendor\bootstrap-tagsinput\v2.2.css" />
+    <Content Include="Content\i\global\vendor\bootstrap-tokenfield\bootstrap-tokenfield.min.js" />
+    <Content Include="Content\i\global\vendor\bootstrap-tokenfield\v2.2.css" />
+    <Content Include="Content\i\global\vendor\bootstrap-touchspin\jquery.bootstrap-touchspin.min.js" />
+    <Content Include="Content\i\global\vendor\bootstrap-touchspin\v2.2.css" />
+    <Content Include="Content\i\global\vendor\bootstrap-treeview\bootstrap-treeview.min.js" />
+    <Content Include="Content\i\global\vendor\bootstrap-treeview\v2.2.css" />
+    <Content Include="Content\i\global\vendor\bootstrap\bootstrap.min.js" />
+    <Content Include="Content\i\global\vendor\breakpoints\breakpoints.min.js" />
+    <Content Include="Content\i\global\vendor\c3\c3.min.js" />
+    <Content Include="Content\i\global\vendor\c3\v2.2.css" />
+    <Content Include="Content\i\global\vendor\card\jquery.card.js" />
+    <Content Include="Content\i\global\vendor\card\v2.2.css" />
+    <Content Include="Content\i\global\vendor\chart-js\Chart.min.js" />
+    <Content Include="Content\i\global\vendor\chartist-js\chartist.min.js" />
+    <Content Include="Content\i\global\vendor\chartist-js\v2.2.css" />
+    <Content Include="Content\i\global\vendor\chartist-plugin-tooltip\chartist-plugin-tooltip.min.js" />
+    <Content Include="Content\i\global\vendor\chartist-plugin-tooltip\v2.2.css" />
+    <Content Include="Content\i\global\vendor\clockpicker\bootstrap-clockpicker.min.js" />
+    <Content Include="Content\i\global\vendor\clockpicker\v2.2.css" />
+    <Content Include="Content\i\global\vendor\codemirror\addon\scroll\simplescrollbars.js" />
+    <Content Include="Content\i\global\vendor\codemirror\addon\scroll\v2.2.css" />
+    <Content Include="Content\i\global\vendor\codemirror\codemirror.js" />
+    <Content Include="Content\i\global\vendor\codemirror\mode\css\css.js" />
+    <Content Include="Content\i\global\vendor\codemirror\mode\htmlmixed\htmlmixed.js" />
+    <Content Include="Content\i\global\vendor\codemirror\mode\xml\xml.js" />
+    <Content Include="Content\i\global\vendor\codemirror\theme\v2.2.css" />
+    <Content Include="Content\i\global\vendor\codemirror\v2.2.css" />
+    <Content Include="Content\i\global\vendor\cropper\cropper.min.js" />
+    <Content Include="Content\i\global\vendor\cropper\v2.2.css" />
+    <Content Include="Content\i\global\vendor\d3\d3.min.js" />
+    <Content Include="Content\i\global\vendor\datatables-bootstrap\dataTables.bootstrap.min.js" />
+    <Content Include="Content\i\global\vendor\datatables-bootstrap\v2.2.css" />
+    <Content Include="Content\i\global\vendor\datatables-fixedheader\dataTables.fixedHeader.js" />
+    <Content Include="Content\i\global\vendor\datatables-fixedheader\v2.2.css" />
+    <Content Include="Content\i\global\vendor\datatables-responsive\dataTables.responsive.js" />
+    <Content Include="Content\i\global\vendor\datatables-responsive\v2.2.css" />
+    <Content Include="Content\i\global\vendor\datatables-tabletools\dataTables.tableTools.js" />
+    <Content Include="Content\i\global\vendor\datatables\jquery.dataTables.min.js" />
+    <Content Include="Content\i\global\vendor\datepair-js\datepair.min.js" />
+    <Content Include="Content\i\global\vendor\datepair-js\jquery.datepair.min.js" />
+    <Content Include="Content\i\global\vendor\draggabilly\draggabilly.pkgd.min.js" />
+    <Content Include="Content\i\global\vendor\dropdown-js\jquery.dropdown.js" />
+    <Content Include="Content\i\global\vendor\dropdown-js\v2.2.css" />
+    <Content Include="Content\i\global\vendor\dropify\dropify.min.js" />
+    <Content Include="Content\i\global\vendor\dropify\v2.2.css" />
+    <Content Include="Content\i\global\vendor\editable-table\mindmup-editabletable.js" />
+    <Content Include="Content\i\global\vendor\editable-table\numeric-input-example.js" />
+    <Content Include="Content\i\global\vendor\editable-table\v2.2.css" />
+    <Content Include="Content\i\global\vendor\filament-tablesaw\tablesaw-init.js" />
+    <Content Include="Content\i\global\vendor\filament-tablesaw\tablesaw.js" />
+    <Content Include="Content\i\global\vendor\filament-tablesaw\v2.2.css" />
+    <Content Include="Content\i\global\vendor\flag-icon-css\v2.2.css" />
+    <Content Include="Content\i\global\vendor\flot\jquery.flot.js" />
+    <Content Include="Content\i\global\vendor\flot\jquery.flot.pie.js" />
+    <Content Include="Content\i\global\vendor\flot\jquery.flot.resize.js" />
+    <Content Include="Content\i\global\vendor\flot\jquery.flot.selection.js" />
+    <Content Include="Content\i\global\vendor\flot\jquery.flot.stack.js" />
+    <Content Include="Content\i\global\vendor\flot\jquery.flot.time.js" />
+    <Content Include="Content\i\global\vendor\footable\footable.all.min.js" />
+    <Content Include="Content\i\global\vendor\footable\v2.2.css" />
+    <Content Include="Content\i\global\vendor\formatter-js\jquery.formatter.min.js" />
+    <Content Include="Content\i\global\vendor\formvalidation\formValidation.min.js" />
+    <Content Include="Content\i\global\vendor\formvalidation\framework\bootstrap.min.js" />
+    <Content Include="Content\i\global\vendor\formvalidation\v2.2.css" />
+    <Content Include="Content\i\global\vendor\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Content\i\global\vendor\fullcalendar\v2.2.css" />
+    <Content Include="Content\i\global\vendor\gauge-js\gauge.min.js" />
+    <Content Include="Content\i\global\vendor\gauge-js\v2.2.css" />
+    <Content Include="Content\i\global\vendor\gmaps\gmaps.js" />
+    <Content Include="Content\i\global\vendor\gridstack\gridstack.min.js" />
+    <Content Include="Content\i\global\vendor\gridstack\v2.2.css" />
+    <Content Include="Content\i\global\vendor\highlight\highlight.pack.js" />
+    <Content Include="Content\i\global\vendor\highlight\styles\v2.2.css" />
+    <Content Include="Content\i\global\vendor\highlight\styles\v2.2_2.css" />
+    <Content Include="Content\i\global\vendor\highlight\v2.2.css" />
+    <Content Include="Content\i\global\vendor\html5sortable\html.sortable.min.js" />
+    <Content Include="Content\i\global\vendor\html5sortable\v2.2.css" />
+    <Content Include="Content\i\global\vendor\icheck\icheck.min.js" />
+    <Content Include="Content\i\global\vendor\icheck\v2.2.css" />
+    <Content Include="Content\i\global\vendor\intro-js\intro.min.js" />
+    <Content Include="Content\i\global\vendor\intro-js\v2.2.css" />
+    <Content Include="Content\i\global\vendor\isotope\isotope.min.js" />
+    <Content Include="Content\i\global\vendor\jquery-appear\jquery.appear.js" />
+    <Content Include="Content\i\global\vendor\jquery-floatthead\jquery.floatThead.min.js" />
+    <Content Include="Content\i\global\vendor\jquery-floatthead\v2.2.css" />
+    <Content Include="Content\i\global\vendor\jquery-knob\jquery.knob.min.js" />
+    <Content Include="Content\i\global\vendor\jquery-labelauty\jquery-labelauty.js" />
+    <Content Include="Content\i\global\vendor\jquery-labelauty\v2.2.css" />
+    <Content Include="Content\i\global\vendor\jquery-placeholder\jquery.placeholder.min.js" />
+    <Content Include="Content\i\global\vendor\jquery-selective\jquery-selective.min.js" />
+    <Content Include="Content\i\global\vendor\jquery-selective\v2.2.css" />
+    <Content Include="Content\i\global\vendor\jquery-strength\jquery-strength.min.js" />
+    <Content Include="Content\i\global\vendor\jquery-strength\v2.2.css" />
+    <Content Include="Content\i\global\vendor\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Content\i\global\vendor\jquery-wizard\jquery-wizard.min.js" />
+    <Content Include="Content\i\global\vendor\jquery-wizard\v2.2.css" />
+    <Content Include="Content\i\global\vendor\jquery\jquery.min.js" />
+    <Content Include="Content\i\global\vendor\jsgrid\jsgrid.min.js" />
+    <Content Include="Content\i\global\vendor\jsgrid\v2.2.css" />
+    <Content Include="Content\i\global\vendor\jt-timepicker\jquery.timepicker.min.js" />
+    <Content Include="Content\i\global\vendor\jt-timepicker\v2.2.css" />
+    <Content Include="Content\i\global\vendor\jvectormap\jquery-jvectormap.min.js" />
+    <Content Include="Content\i\global\vendor\jvectormap\maps\jquery-jvectormap-au-mill-en.js" />
+    <Content Include="Content\i\global\vendor\jvectormap\maps\jquery-jvectormap-ca-lcc-en.js" />
+    <Content Include="Content\i\global\vendor\jvectormap\maps\jquery-jvectormap-de-mill-en.js" />
+    <Content Include="Content\i\global\vendor\jvectormap\maps\jquery-jvectormap-europe-mill-en.js" />
+    <Content Include="Content\i\global\vendor\jvectormap\maps\jquery-jvectormap-fr-mill-en.js" />
+    <Content Include="Content\i\global\vendor\jvectormap\maps\jquery-jvectormap-uk-mill-en.js" />
+    <Content Include="Content\i\global\vendor\jvectormap\maps\jquery-jvectormap-us-merc-en.js" />
+    <Content Include="Content\i\global\vendor\jvectormap\maps\jquery-jvectormap-us-ny-newyork-mill-en.js" />
+    <Content Include="Content\i\global\vendor\jvectormap\maps\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Content\i\global\vendor\jvectormap\maps\jquery-jvectormap-za-mill-en.js" />
+    <Content Include="Content\i\global\vendor\jvectormap\v2.2.css" />
+    <Content Include="Content\i\global\vendor\ladda-bootstrap\ladda.min.js" />
+    <Content Include="Content\i\global\vendor\ladda-bootstrap\spin.min.js" />
+    <Content Include="Content\i\global\vendor\ladda-bootstrap\v2.2.css" />
+    <Content Include="Content\i\global\vendor\layout-grid\layout-grid.min.js" />
+    <Content Include="Content\i\global\vendor\layout-grid\v2.2.css" />
+    <Content Include="Content\i\global\vendor\lodash\lodash.min.js" />
+    <Content Include="Content\i\global\vendor\magnific-popup\jquery.magnific-popup.min.js" />
+    <Content Include="Content\i\global\vendor\magnific-popup\v2.2.css" />
+    <Content Include="Content\i\global\vendor\mapbox.js\mapbox.js" />
+    <Content Include="Content\i\global\vendor\mapbox.js\plugins\leaflet.markercluster.js" />
+    <Content Include="Content\i\global\vendor\mapbox.js\v2.2.css" />
+    <Content Include="Content\i\global\vendor\marked\marked.min.js" />
+    <Content Include="Content\i\global\vendor\masonry\masonry.pkgd.min.js" />
+    <Content Include="Content\i\global\vendor\matchheight\jquery.matchHeight-min.js" />
+    <Content Include="Content\i\global\vendor\modernizr\modernizr.min.js" />
+    <Content Include="Content\i\global\vendor\moment\moment.min.js" />
+    <Content Include="Content\i\global\vendor\morris-js\morris.min.js" />
+    <Content Include="Content\i\global\vendor\morris-js\v2.2.css" />
+    <Content Include="Content\i\global\vendor\mousewheel\jquery.mousewheel.min.js" />
+    <Content Include="Content\i\global\vendor\multi-select\jquery.multi-select.js" />
+    <Content Include="Content\i\global\vendor\multi-select\v2.2.css" />
+    <Content Include="Content\i\global\vendor\nestable\jquery.nestable.js" />
+    <Content Include="Content\i\global\vendor\nestable\v2.2.css" />
+    <Content Include="Content\i\global\vendor\nprogress\nprogress.js" />
+    <Content Include="Content\i\global\vendor\nprogress\v2.2.css" />
+    <Content Include="Content\i\global\vendor\owl-carousel\owl.carousel.min.js" />
+    <Content Include="Content\i\global\vendor\owl-carousel\v2.2.css" />
+    <Content Include="Content\i\global\vendor\peity\jquery.peity.min.js" />
+    <Content Include="Content\i\global\vendor\plyr\plyr.js" />
+    <Content Include="Content\i\global\vendor\plyr\v2.2.css" />
+    <Content Include="Content\i\global\vendor\raphael\raphael-min.js" />
+    <Content Include="Content\i\global\vendor\raty\jquery.raty.js" />
+    <Content Include="Content\i\global\vendor\rickshaw\rickshaw.min.js" />
+    <Content Include="Content\i\global\vendor\rickshaw\v2.2.css" />
+    <Content Include="Content\i\global\vendor\screenfull\screenfull.min.js" />
+    <Content Include="Content\i\global\vendor\select2\select2.full.min.js" />
+    <Content Include="Content\i\global\vendor\select2\select2.min.js" />
+    <Content Include="Content\i\global\vendor\select2\v2.2.css" />
+    <Content Include="Content\i\global\vendor\skycons\skycons.js" />
+    <Content Include="Content\i\global\vendor\slick-carousel\slick.min.js" />
+    <Content Include="Content\i\global\vendor\slick-carousel\v2.2.css" />
+    <Content Include="Content\i\global\vendor\slidepanel\jquery-slidePanel.min.js" />
+    <Content Include="Content\i\global\vendor\slidepanel\v2.2.css" />
+    <Content Include="Content\i\global\vendor\sparkline\jquery.sparkline.min.js" />
+    <Content Include="Content\i\global\vendor\sparkline\v2.2.css" />
+    <Content Include="Content\i\global\vendor\summernote\summernote.min.js" />
+    <Content Include="Content\i\global\vendor\summernote\v2.2.css" />
+    <Content Include="Content\i\global\vendor\switchery\switchery.min.js" />
+    <Content Include="Content\i\global\vendor\switchery\v2.2.css" />
+    <Content Include="Content\i\global\vendor\tasklist\v2.2.css" />
+    <Content Include="Content\i\global\vendor\to-markdown\to-markdown.js" />
+    <Content Include="Content\i\global\vendor\toastr\toastr.min.js" />
+    <Content Include="Content\i\global\vendor\toastr\v2.2.css" />
+    <Content Include="Content\i\global\vendor\toolbar\jquery.toolbar.min.js" />
+    <Content Include="Content\i\global\vendor\toolbar\v2.2.css" />
+    <Content Include="Content\i\global\vendor\typeahead-js\bloodhound.min.js" />
+    <Content Include="Content\i\global\vendor\typeahead-js\typeahead.jquery.min.js" />
+    <Content Include="Content\i\global\vendor\typeahead-js\v2.2.css" />
+    <Content Include="Content\i\global\vendor\waves\v2.2.css" />
+    <Content Include="Content\i\global\vendor\waves\waves.min.js" />
+    <Content Include="Content\i\global\vendor\webui-popover\jquery.webui-popover.min.js" />
+    <Content Include="Content\i\global\vendor\webui-popover\v2.2.css" />
+    <Content Include="Content\i\global\vendor\x-editable\address.js" />
+    <Content Include="Content\i\global\vendor\x-editable\bootstrap-editable.min.js" />
+    <Content Include="Content\i\global\vendor\x-editable\v2.2.css" />
+    <Content Include="Content\i\global\vendor\x-editable\v2.2_2.css" />
+    <Content Include="Content\i\topicon\advanced\alertify.html" />
+    <Content Include="Content\i\topicon\advanced\animation.html" />
+    <Content Include="Content\i\topicon\advanced\bootbox-sweetalert.html" />
+    <Content Include="Content\i\topicon\advanced\context-menu.html" />
+    <Content Include="Content\i\topicon\advanced\highlight.html" />
+    <Content Include="Content\i\topicon\advanced\lightbox.html" />
+    <Content Include="Content\i\topicon\advanced\maps-google.html" />
+    <Content Include="Content\i\topicon\advanced\maps-vector.html" />
+    <Content Include="Content\i\topicon\advanced\masonry.html" />
+    <Content Include="Content\i\topicon\advanced\rating.html" />
+    <Content Include="Content\i\topicon\advanced\scrollable.html" />
+    <Content Include="Content\i\topicon\advanced\sortable-nestable.html" />
+    <Content Include="Content\i\topicon\advanced\toastr.html" />
+    <Content Include="Content\i\topicon\advanced\treeview.html" />
+    <Content Include="Content\i\topicon\apps\calendar\calendar.html" />
+    <Content Include="Content\i\topicon\apps\contacts\contacts.html" />
+    <Content Include="Content\i\topicon\apps\documents\article.html" />
+    <Content Include="Content\i\topicon\apps\documents\articles.html" />
+    <Content Include="Content\i\topicon\apps\documents\categories.html" />
+    <Content Include="Content\i\topicon\apps\forum\forum.html" />
+    <Content Include="Content\i\topicon\apps\location\location.html" />
+    <Content Include="Content\i\topicon\apps\mailbox\mailbox.html" />
+    <Content Include="Content\i\topicon\apps\media\overview.html" />
+    <Content Include="Content\i\topicon\apps\message\message.html" />
+    <Content Include="Content\i\topicon\apps\notebook\notebook.html" />
+    <Content Include="Content\i\topicon\apps\projects\projects.html" />
+    <Content Include="Content\i\topicon\apps\taskboard\taskboard.html" />
+    <Content Include="Content\i\topicon\apps\work\work.html" />
+    <Content Include="Content\i\topicon\assets\css\site.min.css" />
+    <Content Include="Content\i\topicon\assets\css\v2.2.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\advanced\v2.2.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\advanced\v2.2_2.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\advanced\v2.2_3.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\advanced\v2.2_4.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\advanced\v2.2_5.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\advanced\v2.2_6.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\advanced\v2.2_7.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\advanced\v2.2_8.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\apps\v2.2.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\apps\v2.2_10.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\apps\v2.2_11.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\apps\v2.2_12.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\apps\v2.2_2.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\apps\v2.2_3.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\apps\v2.2_4.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\apps\v2.2_5.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\apps\v2.2_6.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\apps\v2.2_7.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\apps\v2.2_8.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\apps\v2.2_9.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\charts\v2.2.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\charts\v2.2_2.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\charts\v2.2_3.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\charts\v2.2_4.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\charts\v2.2_5.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\dashboard\v2.2.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\forms\v2.2.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\forms\v2.2_2.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\forms\v2.2_3.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\forms\v2.2_4.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\forms\v2.2_5.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\layouts\v2.2.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\layouts\v2.2_2.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\pages\v2.2.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\pages\v2.2_10.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\pages\v2.2_11.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\pages\v2.2_12.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\pages\v2.2_13.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\pages\v2.2_14.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\pages\v2.2_15.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\pages\v2.2_16.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\pages\v2.2_17.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\pages\v2.2_18.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\pages\v2.2_19.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\pages\v2.2_2.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\pages\v2.2_20.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\pages\v2.2_3.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\pages\v2.2_4.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\pages\v2.2_5.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\pages\v2.2_6.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\pages\v2.2_7.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\pages\v2.2_8.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\pages\v2.2_9.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\structure\v2.2.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\structure\v2.2_2.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\structure\v2.2_3.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\structure\v2.2_4.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\structure\v2.2_5.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\structure\v2.2_6.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\structure\v2.2_7.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\structure\v2.2_8.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\tables\v2.2.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\tables\v2.2_2.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\uikit\v2.2.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\uikit\v2.2_10.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\uikit\v2.2_11.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\uikit\v2.2_12.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\uikit\v2.2_2.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\uikit\v2.2_3.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\uikit\v2.2_4.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\uikit\v2.2_5.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\uikit\v2.2_6.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\uikit\v2.2_7.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\uikit\v2.2_8.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\uikit\v2.2_9.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\widgets\v2.2.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\widgets\v2.2_2.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\widgets\v2.2_3.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\widgets\v2.2_4.css" />
+    <Content Include="Content\i\topicon\assets\examples\css\widgets\v2.2_5.css" />
+    <Content Include="Content\i\topicon\assets\examples\images\dashboard-header.jpg" />
+    <Content Include="Content\i\topicon\assets\examples\images\login.jpg" />
+    <Content Include="Content\i\topicon\assets\examples\images\modal\accordion-modal.png" />
+    <Content Include="Content\i\topicon\assets\examples\images\modal\fillin-modal.png" />
+    <Content Include="Content\i\topicon\assets\examples\images\modal\form-modal.png" />
+    <Content Include="Content\i\topicon\assets\examples\images\modal\grid-modal.png" />
+    <Content Include="Content\i\topicon\assets\examples\images\modal\modal-position-sidebar.png" />
+    <Content Include="Content\i\topicon\assets\examples\images\modal\modal-position.png" />
+    <Content Include="Content\i\topicon\assets\examples\images\modal\multiple-modal.png" />
+    <Content Include="Content\i\topicon\assets\examples\images\modal\size-modal.png" />
+    <Content Include="Content\i\topicon\assets\examples\images\modal\style-modal.png" />
+    <Content Include="Content\i\topicon\assets\examples\images\modal\sweet-alert.png" />
+    <Content Include="Content\i\topicon\assets\examples\images\modal\tab-modal.png" />
+    <Content Include="Content\i\topicon\assets\examples\images\navbar\fixed-to-bottom.png" />
+    <Content Include="Content\i\topicon\assets\examples\images\navbar\fixed-to-top.png" />
+    <Content Include="Content\i\topicon\assets\examples\js\advanced\animation.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\advanced\bootbox-sweetalert.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\advanced\context-menu.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\advanced\highlight.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\advanced\lightbox.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\advanced\maps-google.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\advanced\scrollable.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\advanced\treeview.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\apps\calendar.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\apps\contacts.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\apps\documents.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\apps\forum.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\apps\location.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\apps\mailbox.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\apps\media.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\apps\message.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\apps\notebook.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\apps\projects.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\apps\taskboard.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\apps\work.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\charts\c3.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\charts\chartist.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\charts\chartjs.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\charts\flot.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\charts\gauges.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\charts\morris.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\charts\peity.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\charts\pie-progress.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\charts\rickshaw.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\charts\sparkline.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\dashboard\v1.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\forms\advanced.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\forms\editable.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\forms\editor-summernote.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\forms\image-cropping.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\forms\uploads.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\forms\validation.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\forms\wizard.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\layouts\panel-transition.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\pages\code-editor.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\pages\faq.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\pages\gallery.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\pages\map-google.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\pages\map-vector.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\structure\timeline.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\tables\bootstrap.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\tables\datatable.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\tables\editable.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\tables\footable.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\tables\jsgrid-db.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\tables\jsgrid.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\uikit\button.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\uikit\carousel.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\uikit\dropdown.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\uikit\icon.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\uikit\list.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\uikit\panel-actions.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\uikit\panel-structure.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\uikit\progress-bars.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\uikit\tooltip-popover.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\widgets\chart.min.js" />
+    <Content Include="Content\i\topicon\assets\examples\js\widgets\weather.min.js" />
+    <Content Include="Content\i\topicon\assets\images\apple-touch-icon.png" />
+    <Content Include="Content\i\topicon\assets\images\favicon.ico" />
+    <Content Include="Content\i\topicon\assets\images\logo%402x.png" />
+    <Content Include="Content\i\topicon\assets\images\logo-blue%402x.png" />
+    <Content Include="Content\i\topicon\assets\images\logo-blue.png" />
+    <Content Include="Content\i\topicon\assets\images\logo.png" />
+    <Content Include="Content\i\topicon\assets\js\app.min.js" />
+    <Content Include="Content\i\topicon\assets\js\configs\config-tour.min.js" />
+    <Content Include="Content\i\topicon\assets\js\sections\menu.min.js" />
+    <Content Include="Content\i\topicon\assets\js\sections\menubar.min.js" />
+    <Content Include="Content\i\topicon\assets\js\sections\sidebar.min.js" />
+    <Content Include="Content\i\topicon\assets\js\sections\skintools.min.js" />
+    <Content Include="Content\i\topicon\assets\js\site.min.js" />
+    <Content Include="Content\i\topicon\charts\c3.html" />
+    <Content Include="Content\i\topicon\charts\chartist.html" />
+    <Content Include="Content\i\topicon\charts\chartjs.html" />
+    <Content Include="Content\i\topicon\charts\flot.html" />
+    <Content Include="Content\i\topicon\charts\gauges.html" />
+    <Content Include="Content\i\topicon\charts\morris.html" />
+    <Content Include="Content\i\topicon\charts\peity.html" />
+    <Content Include="Content\i\topicon\charts\pie-progress.html" />
+    <Content Include="Content\i\topicon\charts\rickshaw.html" />
+    <Content Include="Content\i\topicon\charts\sparkline.html" />
+    <Content Include="Content\i\topicon\forms\advanced.html" />
+    <Content Include="Content\i\topicon\forms\editable.html" />
+    <Content Include="Content\i\topicon\forms\editor-ace.html" />
+    <Content Include="Content\i\topicon\forms\editor-markdown.html" />
+    <Content Include="Content\i\topicon\forms\editor-summernote.html" />
+    <Content Include="Content\i\topicon\forms\file-uploads.html" />
+    <Content Include="Content\i\topicon\forms\general.html" />
+    <Content Include="Content\i\topicon\forms\image-cropping.html" />
+    <Content Include="Content\i\topicon\forms\layouts.html" />
+    <Content Include="Content\i\topicon\forms\masks.html" />
+    <Content Include="Content\i\topicon\forms\material.html" />
+    <Content Include="Content\i\topicon\forms\validation.html" />
+    <Content Include="Content\i\topicon\forms\wizard.html" />
+    <Content Include="Content\i\topicon\index.html" />
+    <Content Include="Content\i\topicon\layouts\boxed.html" />
+    <Content Include="Content\i\topicon\layouts\grids.html" />
+    <Content Include="Content\i\topicon\layouts\headers.html" />
+    <Content Include="Content\i\topicon\layouts\layout-grid.html" />
+    <Content Include="Content\i\topicon\layouts\panel-transition.html" />
+    <Content Include="Content\i\topicon\layouts\two-columns.html" />
+    <Content Include="Content\i\topicon\login-v2.html" />
+    <Content Include="Content\i\topicon\pages\blank.html" />
+    <Content Include="Content\i\topicon\pages\code-editor.html" />
+    <Content Include="Content\i\topicon\pages\email.html" />
+    <Content Include="Content\i\topicon\pages\error-400.html" />
+    <Content Include="Content\i\topicon\pages\error-403.html" />
+    <Content Include="Content\i\topicon\pages\error-404.html" />
+    <Content Include="Content\i\topicon\pages\error-500.html" />
+    <Content Include="Content\i\topicon\pages\error-503.html" />
+    <Content Include="Content\i\topicon\pages\faq.html" />
+    <Content Include="Content\i\topicon\pages\forgot-password.html" />
+    <Content Include="Content\i\topicon\pages\gallery-grid.html" />
+    <Content Include="Content\i\topicon\pages\gallery.html" />
+    <Content Include="Content\i\topicon\pages\invoice.html" />
+    <Content Include="Content\i\topicon\pages\lockscreen.html" />
+    <Content Include="Content\i\topicon\pages\login-v2.html" />
+    <Content Include="Content\i\topicon\pages\login-v3.html" />
+    <Content Include="Content\i\topicon\pages\login.html" />
+    <Content Include="Content\i\topicon\pages\maintenance.html" />
+    <Content Include="Content\i\topicon\pages\map-google.html" />
+    <Content Include="Content\i\topicon\pages\map-vector.html" />
+    <Content Include="Content\i\topicon\pages\profile.html" />
+    <Content Include="Content\i\topicon\pages\register-v2.html" />
+    <Content Include="Content\i\topicon\pages\register-v3.html" />
+    <Content Include="Content\i\topicon\pages\register.html" />
+    <Content Include="Content\i\topicon\pages\search-result.html" />
+    <Content Include="Content\i\topicon\pages\site-map.html" />
+    <Content Include="Content\i\topicon\pages\user.html" />
+    <Content Include="Content\i\topicon\structure\alerts.html" />
+    <Content Include="Content\i\topicon\structure\blockquotes.html" />
+    <Content Include="Content\i\topicon\structure\breadcrumbs.html" />
+    <Content Include="Content\i\topicon\structure\chat.html" />
+    <Content Include="Content\i\topicon\structure\comments.html" />
+    <Content Include="Content\i\topicon\structure\cover.html" />
+    <Content Include="Content\i\topicon\structure\media.html" />
+    <Content Include="Content\i\topicon\structure\nav.html" />
+    <Content Include="Content\i\topicon\structure\navbars.html" />
+    <Content Include="Content\i\topicon\structure\overlay.html" />
+    <Content Include="Content\i\topicon\structure\pagination.html" />
+    <Content Include="Content\i\topicon\structure\pricing-tables.html" />
+    <Content Include="Content\i\topicon\structure\ribbon.html" />
+    <Content Include="Content\i\topicon\structure\step.html" />
+    <Content Include="Content\i\topicon\structure\testimonials.html" />
+    <Content Include="Content\i\topicon\structure\timeline-simple.html" />
+    <Content Include="Content\i\topicon\structure\timeline.html" />
+    <Content Include="Content\i\topicon\tables\basic.html" />
+    <Content Include="Content\i\topicon\tables\bootstrap.html" />
+    <Content Include="Content\i\topicon\tables\datatable.html" />
+    <Content Include="Content\i\topicon\tables\editable.html" />
+    <Content Include="Content\i\topicon\tables\floatthead.html" />
+    <Content Include="Content\i\topicon\tables\footable.html" />
+    <Content Include="Content\i\topicon\tables\jsgrid.html" />
+    <Content Include="Content\i\topicon\tables\responsive.html" />
+    <Content Include="Content\i\topicon\uikit\badges-labels.html" />
+    <Content Include="Content\i\topicon\uikit\buttons.html" />
+    <Content Include="Content\i\topicon\uikit\carousel.html" />
+    <Content Include="Content\i\topicon\uikit\colors.html" />
+    <Content Include="Content\i\topicon\uikit\dropdowns.html" />
+    <Content Include="Content\i\topicon\uikit\icons.html" />
+    <Content Include="Content\i\topicon\uikit\icons\7-stroke.html" />
+    <Content Include="Content\i\topicon\uikit\icons\brand-icons.html" />
+    <Content Include="Content\i\topicon\uikit\icons\font-awesome.html" />
+    <Content Include="Content\i\topicon\uikit\icons\glyphicons.html" />
+    <Content Include="Content\i\topicon\uikit\icons\ionicons.html" />
+    <Content Include="Content\i\topicon\uikit\icons\material-design.html" />
+    <Content Include="Content\i\topicon\uikit\icons\mfglabs.html" />
+    <Content Include="Content\i\topicon\uikit\icons\octicons.html" />
+    <Content Include="Content\i\topicon\uikit\icons\open-iconic.html" />
+    <Content Include="Content\i\topicon\uikit\icons\themify.html" />
+    <Content Include="Content\i\topicon\uikit\icons\weather-icons.html" />
+    <Content Include="Content\i\topicon\uikit\icons\web-icons.html" />
+    <Content Include="Content\i\topicon\uikit\images.html" />
+    <Content Include="Content\i\topicon\uikit\list.html" />
+    <Content Include="Content\i\topicon\uikit\modals.html" />
+    <Content Include="Content\i\topicon\uikit\panel-actions.html" />
+    <Content Include="Content\i\topicon\uikit\panel-portlets.html" />
+    <Content Include="Content\i\topicon\uikit\panel-structure.html" />
+    <Content Include="Content\i\topicon\uikit\progress-bars.html" />
+    <Content Include="Content\i\topicon\uikit\tabs-accordions.html" />
+    <Content Include="Content\i\topicon\uikit\tooltip-popover.html" />
+    <Content Include="Content\i\topicon\uikit\typography.html" />
+    <Content Include="Content\i\topicon\uikit\utilities.html" />
+    <Content Include="Content\i\topicon\widgets\blog.html" />
+    <Content Include="Content\i\topicon\widgets\chart.html" />
+    <Content Include="Content\i\topicon\widgets\data.html" />
+    <Content Include="Content\i\topicon\widgets\social.html" />
+    <Content Include="Content\i\topicon\widgets\statistics.html" />
+    <Content Include="Content\i\topicon\widgets\weather.html" />
+    <Content Include="Content\o\404.html" />
+    <Content Include="Content\o\about-us.html" />
+    <Content Include="Content\o\about.html" />
+    <Content Include="Content\o\about2.html" />
+    <Content Include="Content\o\babytime-babysitter-nurse-and-preschool-education-wordpress-theme - Copy.html" />
+    <Content Include="Content\o\babytime-babysitter-nurse-and-preschool-education-wordpress-theme.html" />
+    <Content Include="Content\o\beauty-agency-wordpress-theme.html" />
+    <Content Include="Content\o\blog-full.html" />
+    <Content Include="Content\o\blog-left.html" />
+    <Content Include="Content\o\blog-mosaic.html" />
+    <Content Include="Content\o\blog-right.html" />
+    <Content Include="Content\o\blog-single-full.html" />
+    <Content Include="Content\o\blog-single-left.html" />
+    <Content Include="Content\o\blog-single-right.html" />
+    <Content Include="Content\o\blog-single-video-full.html" />
+    <Content Include="Content\o\blog-single-video-left.html" />
+    <Content Include="Content\o\blog-single-video-right.html" />
+    <Content Include="Content\o\breadcrumbs1.html" />
+    <Content Include="Content\o\breadcrumbs2.html" />
+    <Content Include="Content\o\breadcrumbs3.html" />
+    <Content Include="Content\o\breadcrumbs4.html" />
+    <Content Include="Content\o\breadcrumbs5.html" />
+    <Content Include="Content\o\breadcrumbs6.html" />
+    <Content Include="Content\o\cart-right.html" />
+    <Content Include="Content\o\checkout-right.html" />
+    <Content Include="Content\o\comingsoon1.html" />
+    <Content Include="Content\o\comingsoon2.html" />
+    <Content Include="Content\o\contact.html" />
+    <Content Include="Content\o\contact2.html" />
+    <Content Include="Content\o\contact3.html" />
+    <Content Include="Content\o\contact_2.html" />
+    <Content Include="Content\o\copyright1.html" />
+    <Content Include="Content\o\copyright2.html" />
+    <Content Include="Content\o\copyright3.html" />
+    <Content Include="Content\o\copyright4.html" />
+    <Content Include="Content\o\copyright5.html" />
+    <Content Include="Content\o\css\animate.min.css" />
+    <Content Include="Content\o\css\animations.css" />
+    <Content Include="Content\o\css\bootstrap-dropdownhover.min.css" />
+    <Content Include="Content\o\css\bootstrap.css" />
+    <Content Include="Content\o\css\bootstrap.min.css" />
+    <Content Include="Content\o\css\et-line-fonts.css" />
+    <Content Include="Content\o\css\flaticon-2.css" />
+    <Content Include="Content\o\css\flaticon.css" />
+    <Content Include="Content\o\css\font-awesome.css" />
+    <Content Include="Content\o\css\fonts.css" />
+    <Content Include="Content\o\css\main.css" />
+    <Content Include="Content\o\css\owl.carousel.css" />
+    <Content Include="Content\o\css\owl.style.css" />
+    <Content Include="Content\o\css\style.css" />
+    <Content Include="Content\o\event-single-full.html" />
+    <Content Include="Content\o\event-single-left.html" />
+    <Content Include="Content\o\event-single-right.html" />
+    <Content Include="Content\o\events-full.html" />
+    <Content Include="Content\o\events-left.html" />
+    <Content Include="Content\o\events-right.html" />
+    <Content Include="Content\o\faq.html" />
+    <Content Include="Content\o\faq2.html" />
+    <Content Include="Content\o\faq\faq.html" />
+    <Content Include="Content\o\faq\faq_2.html" />
+    <Content Include="Content\o\faq\feed\feed.html" />
+    <Content Include="Content\o\faq_2.html" />
+    <Content Include="Content\o\features.html" />
+    <Content Include="Content\o\feed\feed.html" />
+    <Content Include="Content\o\fonts\et-line.eot" />
+    <Content Include="Content\o\fonts\et-line.svg" />
+    <Content Include="Content\o\fonts\et-line.ttf" />
+    <Content Include="Content\o\fonts\et-line.woff" />
+    <Content Include="Content\o\fonts\Flaticon-2.eot" />
+    <Content Include="Content\o\fonts\Flaticon-2.svg" />
+    <Content Include="Content\o\fonts\Flaticon-2.ttf" />
+    <Content Include="Content\o\fonts\Flaticon-2.woff" />
+    <Content Include="Content\o\fonts\Flaticon.eot" />
+    <Content Include="Content\o\fonts\Flaticon.svg" />
+    <Content Include="Content\o\fonts\Flaticon.ttf" />
+    <Content Include="Content\o\fonts\Flaticon.woff" />
+    <Content Include="Content\o\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\o\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\o\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\o\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\o\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\o\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\o\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\o\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\o\fonts\rt-icons-2.svg" />
+    <Content Include="Content\o\footer1.html" />
+    <Content Include="Content\o\footer2.html" />
+    <Content Include="Content\o\footer3.html" />
+    <Content Include="Content\o\footer4.html" />
+    <Content Include="Content\o\footer5.html" />
+    <Content Include="Content\o\gallery-carousel-2-cols.html" />
+    <Content Include="Content\o\gallery-carousel-3-cols.html" />
+    <Content Include="Content\o\gallery-carousel.html" />
+    <Content Include="Content\o\gallery-extended-2-cols.html" />
+    <Content Include="Content\o\gallery-extended-3-cols.html" />
+    <Content Include="Content\o\gallery-extended.html" />
+    <Content Include="Content\o\gallery-fullwidth-3-cols.html" />
+    <Content Include="Content\o\gallery-fullwidth-4-cols.html" />
+    <Content Include="Content\o\gallery-fullwidth.html" />
+    <Content Include="Content\o\gallery-left-2-cols.html" />
+    <Content Include="Content\o\gallery-left.html" />
+    <Content Include="Content\o\gallery-regular-2-cols.html" />
+    <Content Include="Content\o\gallery-regular-3-cols.html" />
+    <Content Include="Content\o\gallery-regular-4-cols.html" />
+    <Content Include="Content\o\gallery-regular.html" />
+    <Content Include="Content\o\gallery-right-2-cols.html" />
+    <Content Include="Content\o\gallery-right.html" />
+    <Content Include="Content\o\gallery-single.html" />
+    <Content Include="Content\o\gallery-single2.html" />
+    <Content Include="Content\o\gallery-single3.html" />
+    <Content Include="Content\o\gallery-tile.html" />
+    <Content Include="Content\o\handyman-repairrenovation-wordpress-theme.html" />
+    <Content Include="Content\o\header1.html" />
+    <Content Include="Content\o\header2.html" />
+    <Content Include="Content\o\header3.html" />
+    <Content Include="Content\o\header4.html" />
+    <Content Include="Content\o\header5.html" />
+    <Content Include="Content\o\header6.html" />
+    <Content Include="Content\o\homepage\feed\feed.html" />
+    <Content Include="Content\o\images\about-2.jpg" />
+    <Content Include="Content\o\images\about.jpg" />
+    <Content Include="Content\o\images\app.jpg" />
+    <Content Include="Content\o\images\apple.png" />
+    <Content Include="Content\o\images\architecture.png" />
+    <Content Include="Content\o\images\banner_right.jpg" />
+    <Content Include="Content\o\images\blog\1.jpg" />
+    <Content Include="Content\o\images\blog\10.jpg" />
+    <Content Include="Content\o\images\blog\2.jpg" />
+    <Content Include="Content\o\images\blog\3.jpg" />
+    <Content Include="Content\o\images\blog\4.jpg" />
+    <Content Include="Content\o\images\blog\5.jpg" />
+    <Content Include="Content\o\images\blog\6.jpg" />
+    <Content Include="Content\o\images\blog\7.jpg" />
+    <Content Include="Content\o\images\blog\8.jpg" />
+    <Content Include="Content\o\images\blog\9.jpg" />
+    <Content Include="Content\o\images\blog\list-1.jpg" />
+    <Content Include="Content\o\images\blog\list-2.jpg" />
+    <Content Include="Content\o\images\blog\list-3.jpg" />
+    <Content Include="Content\o\images\blog\small-1.png" />
+    <Content Include="Content\o\images\blog\small-10.png" />
+    <Content Include="Content\o\images\blog\small-11.png" />
+    <Content Include="Content\o\images\blog\small-12.png" />
+    <Content Include="Content\o\images\blog\small-2.png" />
+    <Content Include="Content\o\images\blog\small-3.png" />
+    <Content Include="Content\o\images\blog\small-4.png" />
+    <Content Include="Content\o\images\blog\small-5.png" />
+    <Content Include="Content\o\images\blog\small-6.png" />
+    <Content Include="Content\o\images\blog\small-7.png" />
+    <Content Include="Content\o\images\blog\small-8.png" />
+    <Content Include="Content\o\images\blog\small-9.png" />
+    <Content Include="Content\o\images\border.png" />
+    <Content Include="Content\o\images\bottom.png" />
+    <Content Include="Content\o\images\bredcrumb.jpg" />
+    <Content Include="Content\o\images\bulb-2.png" />
+    <Content Include="Content\o\images\cleaning-girl.png" />
+    <Content Include="Content\o\images\cleaning.png" />
+    <Content Include="Content\o\images\clients\client_1.png" />
+    <Content Include="Content\o\images\clients\client_2.png" />
+    <Content Include="Content\o\images\clients\client_3.png" />
+    <Content Include="Content\o\images\clients\client_4.png" />
+    <Content Include="Content\o\images\comment-1.jpg" />
+    <Content Include="Content\o\images\comment-2.jpg" />
+    <Content Include="Content\o\images\construcions-services-banner.png" />
+    <Content Include="Content\o\images\Construction-Employyees.png" />
+    <Content Include="Content\o\images\construction.png" />
+    <Content Include="Content\o\images\contact.png" />
+    <Content Include="Content\o\images\course-1.jpg" />
+    <Content Include="Content\o\images\course-2.jpg" />
+    <Content Include="Content\o\images\course-3.jpg" />
+    <Content Include="Content\o\images\darkgrain.png" />
+    <Content Include="Content\o\images\events\01.jpg" />
+    <Content Include="Content\o\images\events\02.jpg" />
+    <Content Include="Content\o\images\events\03.jpg" />
+    <Content Include="Content\o\images\events\04.jpg" />
+    <Content Include="Content\o\images\events\05.jpg" />
+    <Content Include="Content\o\images\events\06.jpg" />
+    <Content Include="Content\o\images\events\07.jpg" />
+    <Content Include="Content\o\images\events\08.jpg" />
+    <Content Include="Content\o\images\events\09.jpg" />
+    <Content Include="Content\o\images\excavators-1.png" />
+    <Content Include="Content\o\images\facts.jpg" />
+    <Content Include="Content\o\images\favicon.ico" />
+    <Content Include="Content\o\images\features-2.png" />
+    <Content Include="Content\o\images\features.png" />
+    <Content Include="Content\o\images\gallery-bg.jpg" />
+    <Content Include="Content\o\images\gallery\01.jpg" />
+    <Content Include="Content\o\images\gallery\02.jpg" />
+    <Content Include="Content\o\images\gallery\03.jpg" />
+    <Content Include="Content\o\images\gallery\04.jpg" />
+    <Content Include="Content\o\images\gallery\05.jpg" />
+    <Content Include="Content\o\images\gallery\06.jpg" />
+    <Content Include="Content\o\images\gallery\07.jpg" />
+    <Content Include="Content\o\images\gallery\08.jpg" />
+    <Content Include="Content\o\images\gallery\09.jpg" />
+    <Content Include="Content\o\images\gallery\10.jpg" />
+    <Content Include="Content\o\images\gallery\11.jpg" />
+    <Content Include="Content\o\images\gallery\12.jpg" />
+    <Content Include="Content\o\images\gallery\13.jpg" />
+    <Content Include="Content\o\images\gallery\15.jpg" />
+    <Content Include="Content\o\images\gallery\16.jpg" />
+    <Content Include="Content\o\images\home-plumbing.png" />
+    <Content Include="Content\o\images\icons\driller.png" />
+    <Content Include="Content\o\images\icons\hammer.png" />
+    <Content Include="Content\o\images\icons\paint-brush.png" />
+    <Content Include="Content\o\images\icons\shovel.png" />
+    <Content Include="Content\o\images\large_left.png" />
+    <Content Include="Content\o\images\loader.gif" />
+    <Content Include="Content\o\images\logo - Copy.png" />
+    <Content Include="Content\o\images\logo-cleaning.png" />
+    <Content Include="Content\o\images\logo-education.png" />
+    <Content Include="Content\o\images\logo-solar.png" />
+    <Content Include="Content\o\images\logo.png" />
+    <Content Include="Content\o\images\logox.png" />
+    <Content Include="Content\o\images\logo_bottom.png" />
+    <Content Include="Content\o\images\logo_grey.png" />
+    <Content Include="Content\o\images\map-bg.png" />
+    <Content Include="Content\o\images\map_marker_icon.png" />
+    <Content Include="Content\o\images\media01.jpg" />
+    <Content Include="Content\o\images\media02.jpg" />
+    <Content Include="Content\o\images\parallax\blog.jpg" />
+    <Content Include="Content\o\images\parallax\bottom.jpg" />
+    <Content Include="Content\o\images\parallax\breadcrumbs.jpg" />
+    <Content Include="Content\o\images\parallax\featured.jpg" />
+    <Content Include="Content\o\images\parallax\map.jpg" />
+    <Content Include="Content\o\images\parallax\progress.jpg" />
+    <Content Include="Content\o\images\parallax\recent.jpg" />
+    <Content Include="Content\o\images\parallax\table.jpg" />
+    <Content Include="Content\o\images\partners_square\1.png" />
+    <Content Include="Content\o\images\partners_square\2.png" />
+    <Content Include="Content\o\images\partners_square\3.png" />
+    <Content Include="Content\o\images\partners_square\4.png" />
+    <Content Include="Content\o\images\partners_square\6.png" />
+    <Content Include="Content\o\images\partners_square\7.png" />
+    <Content Include="Content\o\images\partners_square\8.png" />
+    <Content Include="Content\o\images\partners_square\9.png" />
+    <Content Include="Content\o\images\partners_square\white_5.png" />
+    <Content Include="Content\o\images\plumber-tools-2.jpg" />
+    <Content Include="Content\o\images\plumbing-logo.png" />
+    <Content Include="Content\o\images\plumbing-tools.png" />
+    <Content Include="Content\o\images\portfolio\1.jpg" />
+    <Content Include="Content\o\images\portfolio\10.jpg" />
+    <Content Include="Content\o\images\portfolio\11.jpg" />
+    <Content Include="Content\o\images\portfolio\12.jpg" />
+    <Content Include="Content\o\images\portfolio\13.jpg" />
+    <Content Include="Content\o\images\portfolio\14.jpg" />
+    <Content Include="Content\o\images\portfolio\15.jpg" />
+    <Content Include="Content\o\images\portfolio\16.jpg" />
+    <Content Include="Content\o\images\portfolio\17.jpg" />
+    <Content Include="Content\o\images\portfolio\18.jpg" />
+    <Content Include="Content\o\images\portfolio\19.jpg" />
+    <Content Include="Content\o\images\portfolio\2.jpg" />
+    <Content Include="Content\o\images\portfolio\20.jpg" />
+    <Content Include="Content\o\images\portfolio\21.jpg" />
+    <Content Include="Content\o\images\portfolio\22.jpg" />
+    <Content Include="Content\o\images\portfolio\23.jpg" />
+    <Content Include="Content\o\images\portfolio\24.jpg" />
+    <Content Include="Content\o\images\portfolio\25.jpg" />
+    <Content Include="Content\o\images\portfolio\26.jpg" />
+    <Content Include="Content\o\images\portfolio\27.jpg" />
+    <Content Include="Content\o\images\portfolio\28.jpg" />
+    <Content Include="Content\o\images\portfolio\29.jpg" />
+    <Content Include="Content\o\images\portfolio\3.jpg" />
+    <Content Include="Content\o\images\portfolio\30.jpg" />
+    <Content Include="Content\o\images\portfolio\31.jpg" />
+    <Content Include="Content\o\images\portfolio\32.jpg" />
+    <Content Include="Content\o\images\portfolio\33.jpg" />
+    <Content Include="Content\o\images\portfolio\34.jpg" />
+    <Content Include="Content\o\images\portfolio\35.jpg" />
+    <Content Include="Content\o\images\portfolio\36.jpg" />
+    <Content Include="Content\o\images\portfolio\4.jpg" />
+    <Content Include="Content\o\images\portfolio\5.jpg" />
+    <Content Include="Content\o\images\portfolio\6.jpg" />
+    <Content Include="Content\o\images\portfolio\7.jpg" />
+    <Content Include="Content\o\images\portfolio\8.jpg" />
+    <Content Include="Content\o\images\portfolio\9.jpg" />
+    <Content Include="Content\o\images\portfolio\details.jpg" />
+    <Content Include="Content\o\images\preloader.gif" />
+    <Content Include="Content\o\images\project-bg.jpg" />
+    <Content Include="Content\o\images\quote-bg.jpg" />
+    <Content Include="Content\o\images\recent_post1.jpg" />
+    <Content Include="Content\o\images\recent_post2.jpg" />
+    <Content Include="Content\o\images\renovation.png" />
+    <Content Include="Content\o\images\services-1.jpg" />
+    <Content Include="Content\o\images\services\1.jpg" />
+    <Content Include="Content\o\images\services\2.jpg" />
+    <Content Include="Content\o\images\services\3.jpg" />
+    <Content Include="Content\o\images\services\4.jpg" />
+    <Content Include="Content\o\images\services\5.jpg" />
+    <Content Include="Content\o\images\services\6.jpg" />
+    <Content Include="Content\o\images\services\building-1.jpg" />
+    <Content Include="Content\o\images\services\building-2.jpg" />
+    <Content Include="Content\o\images\services\building-3.jpg" />
+    <Content Include="Content\o\images\services\building-4.jpg" />
+    <Content Include="Content\o\images\services\painting-1.jpg" />
+    <Content Include="Content\o\images\shop\01.jpg" />
+    <Content Include="Content\o\images\shop\02.jpg" />
+    <Content Include="Content\o\images\shop\03.jpg" />
+    <Content Include="Content\o\images\shop\04.jpg" />
+    <Content Include="Content\o\images\shop\05.jpg" />
+    <Content Include="Content\o\images\shop\06.jpg" />
+    <Content Include="Content\o\images\shop\1.jpg" />
+    <Content Include="Content\o\images\shop\10.jpg" />
+    <Content Include="Content\o\images\shop\11.jpg" />
+    <Content Include="Content\o\images\shop\12.jpg" />
+    <Content Include="Content\o\images\shop\2.jpg" />
+    <Content Include="Content\o\images\shop\3.jpg" />
+    <Content Include="Content\o\images\shop\4.jpg" />
+    <Content Include="Content\o\images\shop\5.jpg" />
+    <Content Include="Content\o\images\shop\6.jpg" />
+    <Content Include="Content\o\images\shop\7.jpg" />
+    <Content Include="Content\o\images\shop\8.jpg" />
+    <Content Include="Content\o\images\shop\9.jpg" />
+    <Content Include="Content\o\images\shop\bag.jpg" />
+    <Content Include="Content\o\images\shop\cart.png" />
+    <Content Include="Content\o\images\shop\large.png" />
+    <Content Include="Content\o\images\shop\recent.png" />
+    <Content Include="Content\o\images\side-image.jpg" />
+    <Content Include="Content\o\images\slide01.jpg" />
+    <Content Include="Content\o\images\slide02.jpg" />
+    <Content Include="Content\o\images\slider\1.jpg" />
+    <Content Include="Content\o\images\slider\10.jpg" />
+    <Content Include="Content\o\images\slider\2.jpg" />
+    <Content Include="Content\o\images\slider\3.jpg" />
+    <Content Include="Content\o\images\slider\4.jpg" />
+    <Content Include="Content\o\images\slider\5.jpg" />
+    <Content Include="Content\o\images\slider\6.jpg" />
+    <Content Include="Content\o\images\slider\7.jpg" />
+    <Content Include="Content\o\images\slider\8.jpg" />
+    <Content Include="Content\o\images\slider\9.jpg" />
+    <Content Include="Content\o\images\slider\plumber.png" />
+    <Content Include="Content\o\images\slider\solar-1.jpg" />
+    <Content Include="Content\o\images\slider\solar-2.jpg" />
+    <Content Include="Content\o\images\slider\teaching-1.jpg" />
+    <Content Include="Content\o\images\slider\teaching-2.jpg" />
+    <Content Include="Content\o\images\solar-panel-2.png" />
+    <Content Include="Content\o\images\solar-panels.png" />
+    <Content Include="Content\o\images\solar-system.png" />
+    <Content Include="Content\o\images\teaching-1.jpg" />
+    <Content Include="Content\o\images\teaching-2.jpg" />
+    <Content Include="Content\o\images\teaching-3.jpg" />
+    <Content Include="Content\o\images\teaching-us.png" />
+    <Content Include="Content\o\images\team\01.jpg" />
+    <Content Include="Content\o\images\team\02.jpg" />
+    <Content Include="Content\o\images\team\03.jpg" />
+    <Content Include="Content\o\images\team\04.jpg" />
+    <Content Include="Content\o\images\team\05.jpg" />
+    <Content Include="Content\o\images\team\06.jpg" />
+    <Content Include="Content\o\images\team\1.png" />
+    <Content Include="Content\o\images\team\10.png" />
+    <Content Include="Content\o\images\team\11.png" />
+    <Content Include="Content\o\images\team\12.png" />
+    <Content Include="Content\o\images\team\13.png" />
+    <Content Include="Content\o\images\team\14.png" />
+    <Content Include="Content\o\images\team\15.png" />
+    <Content Include="Content\o\images\team\2.png" />
+    <Content Include="Content\o\images\team\3.png" />
+    <Content Include="Content\o\images\team\5.png" />
+    <Content Include="Content\o\images\team\6.png" />
+    <Content Include="Content\o\images\team\8.png" />
+    <Content Include="Content\o\images\team\9.png" />
+    <Content Include="Content\o\images\teaser01.jpg" />
+    <Content Include="Content\o\images\teaser02.jpg" />
+    <Content Include="Content\o\images\teaser03.jpg" />
+    <Content Include="Content\o\images\testimonial-1.png" />
+    <Content Include="Content\o\images\testimonials.jpg" />
+    <Content Include="Content\o\images\top.png" />
+    <Content Include="Content\o\images\wind-energy.png" />
+    <Content Include="Content\o\img\aside_bg.jpg" />
+    <Content Include="Content\o\img\background_section.png" />
+    <Content Include="Content\o\img\owl.video.play.png" />
+    <Content Include="Content\o\img\pattern1.png" />
+    <Content Include="Content\o\img\pattern10.png" />
+    <Content Include="Content\o\img\pattern11.png" />
+    <Content Include="Content\o\img\pattern2.png" />
+    <Content Include="Content\o\img\pattern3.png" />
+    <Content Include="Content\o\img\pattern4.png" />
+    <Content Include="Content\o\img\pattern5.png" />
+    <Content Include="Content\o\img\pattern6.png" />
+    <Content Include="Content\o\img\pattern7.png" />
+    <Content Include="Content\o\img\pattern8.png" />
+    <Content Include="Content\o\img\pattern9.png" />
+    <Content Include="Content\o\img\preloader.gif" />
+    <Content Include="Content\o\img\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="Content\o\img\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="Content\o\img\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="Content\o\img\prettyPhoto\facebook\loader.gif" />
+    <Content Include="Content\o\img\prettyPhoto\facebook\sprite %281%29.png" />
+    <Content Include="Content\o\img\prettyPhoto\facebook\sprite.png" />
+    <Content Include="Content\o\img\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="Content\o\index.html" />
+    <Content Include="Content\o\index2.html" />
+    <Content Include="Content\o\index_singlepage.html" />
+    <Content Include="Content\o\index_static.html" />
+    <Content Include="Content\o\js\bootstrap.min.js" />
+    <Content Include="Content\o\js\carousel.min.js" />
+    <Content Include="Content\o\js\compressed.js" />
+    <Content Include="Content\o\js\custom.js" />
+    <Content Include="Content\o\js\easing.js" />
+    <Content Include="Content\o\js\hover.min.js" />
+    <Content Include="Content\o\js\jquery.appear.min.js" />
+    <Content Include="Content\o\js\jquery.countTo.js" />
+    <Content Include="Content\o\js\jquery.min.js" />
+    <Content Include="Content\o\js\jquery.shuffle.min.js" />
+    <Content Include="Content\o\js\jquery.smoothscroll.js" />
+    <Content Include="Content\o\js\jquery.stellar.min.js" />
+    <Content Include="Content\o\js\jquery.waypoints.js" />
+    <Content Include="Content\o\js\magnific-popup\jquery.magnific-popup.min.js" />
+    <Content Include="Content\o\js\magnific-popup\magnific-popup.css" />
+    <Content Include="Content\o\js\main.js" />
+    <Content Include="Content\o\js\map.js" />
+    <Content Include="Content\o\js\modernizr.js" />
+    <Content Include="Content\o\js\revolution\assets\arrowleft.png" />
+    <Content Include="Content\o\js\revolution\assets\arrowright.png" />
+    <Content Include="Content\o\js\revolution\assets\arrow_left.png" />
+    <Content Include="Content\o\js\revolution\assets\arrow_left2.png" />
+    <Content Include="Content\o\js\revolution\assets\arrow_right.png" />
+    <Content Include="Content\o\js\revolution\assets\arrow_right2.png" />
+    <Content Include="Content\o\js\revolution\assets\boxed_bgtile.png" />
+    <Content Include="Content\o\js\revolution\assets\bullet.png" />
+    <Content Include="Content\o\js\revolution\assets\bullets.png" />
+    <Content Include="Content\o\js\revolution\assets\bullets2.png" />
+    <Content Include="Content\o\js\revolution\assets\bullet_boxed.png" />
+    <Content Include="Content\o\js\revolution\assets\coloredbg.png" />
+    <Content Include="Content\o\js\revolution\assets\gridtile.png" />
+    <Content Include="Content\o\js\revolution\assets\gridtile_3x3.png" />
+    <Content Include="Content\o\js\revolution\assets\gridtile_3x3_white.png" />
+    <Content Include="Content\o\js\revolution\assets\gridtile_white.png" />
+    <Content Include="Content\o\js\revolution\assets\large_left.png" />
+    <Content Include="Content\o\js\revolution\assets\large_right.png" />
+    <Content Include="Content\o\js\revolution\assets\loader.gif" />
+    <Content Include="Content\o\js\revolution\assets\navigdots.png" />
+    <Content Include="Content\o\js\revolution\assets\navigdots_bgtile.png" />
+    <Content Include="Content\o\js\revolution\assets\shadow1.png" />
+    <Content Include="Content\o\js\revolution\assets\shadow2.png" />
+    <Content Include="Content\o\js\revolution\assets\shadow3.png" />
+    <Content Include="Content\o\js\revolution\assets\small_left.png" />
+    <Content Include="Content\o\js\revolution\assets\small_left_boxed.png" />
+    <Content Include="Content\o\js\revolution\assets\small_right.png" />
+    <Content Include="Content\o\js\revolution\assets\small_right_boxed.png" />
+    <Content Include="Content\o\js\revolution\assets\timer.png" />
+    <Content Include="Content\o\js\revolution\css\settings.css" />
+    <Content Include="Content\o\js\revolution\font\revicons90c6.eot" />
+    <Content Include="Content\o\js\revolution\font\revicons90c6.svg" />
+    <Content Include="Content\o\js\revolution\font\revicons90c6.ttf" />
+    <Content Include="Content\o\js\revolution\font\revicons90c6.woff" />
+    <Content Include="Content\o\js\revolution\images\gradient\g30.png" />
+    <Content Include="Content\o\js\revolution\images\gradient\g40.png" />
+    <Content Include="Content\o\js\revolution\js\jquery.themepunch.revolution.min.js" />
+    <Content Include="Content\o\js\revolution\js\jquery.themepunch.tools.min.js" />
+    <Content Include="Content\o\js\switcher.js" />
+    <Content Include="Content\o\js\theia-sticky-sidebar.js" />
+    <Content Include="Content\o\js\validator.min.js" />
+    <Content Include="Content\o\js\vendor\modernizr-2.6.2.min.js" />
+    <Content Include="Content\o\life-coach-personal-page-wordpress-theme.html" />
+    <Content Include="Content\o\medico-medicalveterinary-html-template.html" />
+    <Content Include="Content\o\models-agency-model-and-fashion-portfolio-wordpress-theme.html" />
+    <Content Include="Content\o\modernwebtemplates_default.html" />
+    <Content Include="Content\o\modernwebtemplates_default_2.html" />
+    <Content Include="Content\o\newsletter.html" />
+    <Content Include="Content\o\pricing.html" />
+    <Content Include="Content\o\privacy.html" />
+    <Content Include="Content\o\product-right.html" />
+    <Content Include="Content\o\register.html" />
+    <Content Include="Content\o\services.html" />
+    <Content Include="Content\o\shop-right.html" />
+    <Content Include="Content\o\shortcodes_animation.html" />
+    <Content Include="Content\o\shortcodes_bootstrap.html" />
+    <Content Include="Content\o\shortcodes_buttons.html" />
+    <Content Include="Content\o\shortcodes_icons.html" />
+    <Content Include="Content\o\shortcodes_pricing.html" />
+    <Content Include="Content\o\shortcodes_progress.html" />
+    <Content Include="Content\o\shortcodes_socialicons.html" />
+    <Content Include="Content\o\shortcodes_tabs.html" />
+    <Content Include="Content\o\shortcodes_teasers.html" />
+    <Content Include="Content\o\shortcodes_typography.html" />
+    <Content Include="Content\o\shortcodes_widgets.html" />
+    <Content Include="Content\o\solar-renewable-energy-sinlgemultipage-html-template.html" />
+    <Content Include="Content\o\solar_modernwebtemplates_default.html" />
+    <Content Include="Content\o\the-scientist-science-and-research-magazine-wordpress-theme.html" />
+    <Content Include="Content\o\timetable.html" />
+    <Content Include="Content\o\valeo-health-center-clinic-hospital-wordpress-theme.html" />
+    <Content Include="Content\o\videomag-magazine-videoblog-theme.html" />
+    <Content Include="Content\o\xmlrpc.xml" />
+    <Content Include="Customer\AddEnquiry.aspx" />
+    <Content Include="Customer\Cart.aspx" />
+    <Content Include="Customer\Contact.aspx" />
+    <Content Include="Customer\Dashboard.aspx" />
+    <Content Include="Customer\Default.aspx" />
+    <Content Include="Customer\Gallary.aspx" />
+    <Content Include="Customer\Invoice.aspx" />
+    <Content Include="Customer\Logout.aspx" />
+    <Content Include="Customer\MyProfile.aspx" />
+    <Content Include="Customer\PaymentStatus.aspx" />
+    <Content Include="Customer\PayProcess.aspx" />
+    <Content Include="Customer\Product.aspx" />
+    <Content Include="Customer\Register.aspx" />
+    <Content Include="Customer\Services.aspx" />
+    <Content Include="Customer\ShopProduct.aspx" />
+    <Content Include="Customer\ViewSentMessages.aspx" />
+    <Content Include="DbCode\TextFile1.txt" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\i\base\advanced\lightbox\test-ajax-2.tpl" />
+    <Content Include="Content\i\base\advanced\lightbox\test-ajax.tpl" />
+    <Content Include="Content\i\global\fonts\brand-icons\brand-icons.eot" />
+    <Content Include="Content\i\global\fonts\brand-icons\brand-icons.ttf" />
+    <Content Include="Content\i\global\fonts\brand-icons\brand-icons.woff" />
+    <Content Include="Content\i\global\fonts\brand-icons\brand-icons.woff2" />
+    <Content Include="Content\i\global\fonts\material-design\Material-Design-Iconic-Font.eot" />
+    <Content Include="Content\i\global\fonts\material-design\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Content\i\global\fonts\material-design\Material-Design-Iconic-Font.woff" />
+    <Content Include="Content\i\global\fonts\material-design\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Content\i\topicon\advanced\lightbox\test-ajax-2.tpl" />
+    <Content Include="Content\i\topicon\advanced\lightbox\test-ajax.tpl" />
+    <Content Include="index.html" />
+    <Content Include="Media\Customer\Desert.jpg" />
+    <Content Include="Media\Customer\mat logo.PNG" />
+    <Content Include="Media\Customer\NoProfile.png" />
+    <Content Include="Media\Customer\Tulips.jpg" />
+    <Content Include="Media\Documents\9 a5455-armed_forces_flag_day_on_december_7.jpg" />
+    <Content Include="Media\Documents\9 anuvaa_offer-banner.jpg" />
+    <Content Include="Media\Documents\9 bhushan photo.jpg" />
+    <Content Include="Media\Documents\NoProfile.png" />
+    <Content Include="Media\Employee\9about-us-staff-one.jpg" />
+    <Content Include="Media\Employee\9about-us-staff-six.jpg" />
+    <Content Include="Media\Employee\9author_photo.jpg" />
+    <Content Include="Media\Employee\9bhushan photo.jpg" />
+    <Content Include="Media\Employee\9comment_photo_4.jpg" />
+    <Content Include="Media\Employee\about-us-staff-two.jpg" />
+    <Content Include="Media\Employee\author_photo.jpg" />
+    <Content Include="Media\Employee\comment_photo_1.jpg" />
+    <Content Include="Media\Employee\comment_photo_4.jpg" />
+    <Content Include="Media\Employee\Koala.jpg" />
+    <Content Include="Media\Employee\NoProfile.png" />
+    <Content Include="Media\galleryimages\02.jpg" />
+    <Content Include="Media\galleryimages\04.jpg" />
+    <Content Include="Media\galleryimages\Solar-irrigation-system.jpg" />
+    <Content Include="Media\galleryimages\teaser01.jpg" />
+    <Content Include="Media\galleryimages\teaser02.jpg" />
+    <Content Include="Media\galleryimages\teaser03.jpg" />
+    <Content Include="Media\NoProfile.png" />
+    <Content Include="Media\Product\ sudarshan-saur-delite-puf-soft-water-250-litre-solar-heater.jpg" />
+    <Content Include="Media\Product\1 images.jpg" />
+    <Content Include="Media\Product\gl.jpg" />
+    <Content Include="Media\Product\NoProfile.png" />
+    <Content Include="Personnel\Admin\AccountForSolar.aspx" />
+    <Content Include="Personnel\Admin\AddCustomer.aspx" />
+    <Content Include="Personnel\Admin\AddEmp.aspx" />
+    <Content Include="Personnel\Admin\AddNewAccount.aspx" />
+    <Content Include="Personnel\Admin\AddNewDivision.aspx" />
+    <Content Include="Personnel\Admin\AddProduct.aspx" />
+    <Content Include="Personnel\Admin\AddProductSubType.aspx" />
+    <Content Include="Personnel\Admin\addproductype.aspx" />
+    <Content Include="Personnel\Admin\AddVariation.aspx" />
+    <Content Include="Personnel\Admin\ChangePassword.aspx" />
+    <Content Include="Personnel\Admin\CreateMessage.aspx" />
+    <Content Include="Personnel\Admin\Default.aspx" />
+    <Content Include="Personnel\Admin\EditCustomer.aspx" />
+    <Content Include="Personnel\Admin\EditCustomerOther.aspx" />
+    <Content Include="Personnel\Admin\EditCustomerTaxDetails.aspx" />
+    <Content Include="Personnel\Admin\EditEmp.aspx" />
+    <Content Include="Personnel\Admin\EditProduct.aspx" />
+    <Content Include="Personnel\Admin\EditProductAttribute.aspx" />
+    <Content Include="Personnel\Admin\EditProductGallary.aspx" />
+    <Content Include="Personnel\Admin\EditProfile.aspx" />
+    <Content Include="Personnel\Admin\emails\changepass.html" />
+    <Content Include="Personnel\Admin\emails\forget.html" />
+    <Content Include="Personnel\Admin\emails\register.html" />
+    <Content Include="Personnel\Admin\emails\Upgrade.html" />
+    <Content Include="Personnel\Admin\Gallery.aspx" />
+    <Content Include="Personnel\Admin\GeneralLedger.aspx" />
+    <Content Include="Personnel\Admin\HtmlPage1.html" />
+    <Content Include="Personnel\Admin\logout.aspx" />
+    <Content Include="Personnel\Admin\NewEntry.aspx" />
+    <Content Include="Personnel\Admin\PreviousEntries.aspx" />
+    <Content Include="Personnel\Admin\PrintEntries.aspx" />
+    <Content Include="Personnel\Admin\ReplyMessage.aspx" />
+    <Content Include="Personnel\Admin\Reports\EditExpenseSheet.aspx" />
+    <Content Include="Personnel\Admin\Reports\ExpenseSheetReport.aspx" />
+    <Content Include="Personnel\Admin\Reports\Invoice.aspx" />
+    <Content Include="Personnel\Admin\Reports\Order.aspx" />
+    <Content Include="Personnel\Admin\Reports\Report.aspx" />
+    <Content Include="Personnel\Admin\SelectDivision.aspx" />
+    <Content Include="Personnel\Admin\Terij.aspx" />
+    <Content Include="Personnel\Admin\verify.aspx" />
+    <Content Include="Personnel\Admin\ViewAccounts.aspx" />
+    <Content Include="Personnel\Admin\ViewCollection.aspx" />
+    <Content Include="Personnel\Admin\ViewCustomer.aspx" />
+    <Content Include="Personnel\Admin\ViewDivisions.aspx" />
+    <Content Include="Personnel\Admin\ViewDSR.aspx" />
+    <Content Include="Personnel\Admin\ViewEmployee.aspx" />
+    <Content Include="Personnel\Admin\ViewEmployeeExpenses.aspx" />
+    <Content Include="Personnel\Admin\ViewExpenseSheet.aspx" />
+    <Content Include="Personnel\Admin\ViewFullProduct.aspx" />
+    <Content Include="Personnel\Admin\ViewMessages.aspx" />
+    <Content Include="Personnel\Admin\ViewProduct.aspx" />
+    <Content Include="Personnel\Admin\ViewSentMessages.aspx" />
+    <Content Include="Personnel\Admin\WebForm1.aspx" />
+    <Content Include="Personnel\Clerk\Default.aspx" />
+    <Content Include="Personnel\Marketing\AddEnquiry.aspx" />
+    <Content Include="Personnel\Marketing\BankDetails.aspx" />
+    <Content Include="Personnel\Marketing\ChangePassword.aspx" />
+    <Content Include="Personnel\Marketing\Collection.aspx" />
+    <Content Include="Personnel\Marketing\CreateDSR.aspx" />
+    <Content Include="Personnel\Marketing\Default.aspx" />
+    <Content Include="Personnel\Marketing\EditProfile.aspx" />
+    <Content Include="Personnel\Marketing\ExpenseSheet.aspx" />
+    <Content Include="Personnel\Marketing\KYCDocument.aspx" />
+    <Content Include="Personnel\Marketing\logout.aspx" />
+    <Content Include="Personnel\Marketing\ViewCustomer.aspx" />
+    <Content Include="Personnel\Marketing\ViewDSR.aspx" />
+    <Content Include="Personnel\Marketing\ViewEmployeeExpenses.aspx" />
+    <Content Include="Personnel\Marketing\ViewExpenseSheet.aspx" />
+    <Content Include="Personnel\Marketing\ViewSentMessages.aspx" />
+    <Content Include="Personnel\MasterPages\Admin.Master" />
+    <Content Include="Personnel\MasterPages\Clerk.Master" />
+    <Content Include="Personnel\MasterPages\Marketing.Master" />
+    <Content Include="Content\o\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\o\fonts\rt-icons-2.eot" />
+    <Content Include="Content\o\fonts\rt-icons-2.ttf" />
+    <Content Include="Content\o\fonts\rt-icons-2.woff" />
+    <Content Include="bin\SudarshanSolar.dll.config" />
+    <Content Include="Customer\OutsideMaster.Master" />
+    <Content Include="Personnel\Admin\Reports\AdminReport.Master" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Personnel\MasterPages\TextFile1.txt" />
+    <Content Include="Personnel\Usercontrol\EmployeeProfilePhoto.ascx" />
+    <Content Include="Personnel\Usercontrol\SimilarProduct.ascx" />
+    <Content Include="Register.aspx" />
+    <Content Include="RetrievePassword.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Sudarshan Solar Systems Analysis and Quotation.pdf" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\Common.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Common.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\ErrorMessages.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErrorMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GlobalResource.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobalResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Messages.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="ChkLogin.aspx.cs">
+      <DependentUpon>ChkLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChkLogin.aspx.designer.cs">
+      <DependentUpon>ChkLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\AddEnquiry.aspx.cs">
+      <DependentUpon>AddEnquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\AddEnquiry.aspx.designer.cs">
+      <DependentUpon>AddEnquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Gallary.aspx.cs">
+      <DependentUpon>Gallary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Gallary.aspx.designer.cs">
+      <DependentUpon>Gallary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Invoice.aspx.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Invoice.aspx.designer.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\MyProfile.aspx.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\MyProfile.aspx.designer.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\OutsideMaster.Master.cs">
+      <DependentUpon>OutsideMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\OutsideMaster.Master.designer.cs">
+      <DependentUpon>OutsideMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\PaymentStatus.aspx.cs">
+      <DependentUpon>PaymentStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\PaymentStatus.aspx.designer.cs">
+      <DependentUpon>PaymentStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\PayProcess.aspx.cs">
+      <DependentUpon>PayProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\PayProcess.aspx.designer.cs">
+      <DependentUpon>PayProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Services.aspx.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Services.aspx.designer.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\ShopProduct.aspx.cs">
+      <DependentUpon>ShopProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\ShopProduct.aspx.designer.cs">
+      <DependentUpon>ShopProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\ViewSentMessages.aspx.cs">
+      <DependentUpon>ViewSentMessages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\ViewSentMessages.aspx.designer.cs">
+      <DependentUpon>ViewSentMessages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DbCode\DatabaseConnection.cs" />
+    <Compile Include="DbCode\RegexUtilities.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\AccountForSolar.aspx.cs">
+      <DependentUpon>AccountForSolar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\AccountForSolar.aspx.designer.cs">
+      <DependentUpon>AccountForSolar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\AddCustomer.aspx.cs">
+      <DependentUpon>AddCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\AddCustomer.aspx.designer.cs">
+      <DependentUpon>AddCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\AddEmp.aspx.cs">
+      <DependentUpon>AddEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\AddEmp.aspx.designer.cs">
+      <DependentUpon>AddEmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\AddNewAccount.aspx.cs">
+      <DependentUpon>AddNewAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\AddNewAccount.aspx.designer.cs">
+      <DependentUpon>AddNewAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\AddNewDivision.aspx.cs">
+      <DependentUpon>AddNewDivision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\AddNewDivision.aspx.designer.cs">
+      <DependentUpon>AddNewDivision.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\AddProduct.aspx.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\AddProduct.aspx.designer.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\AddProductSubType.aspx.cs">
+      <DependentUpon>AddProductSubType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\AddProductSubType.aspx.designer.cs">
+      <DependentUpon>AddProductSubType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\addproductype.aspx.cs">
+      <DependentUpon>addproductype.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\addproductype.aspx.designer.cs">
+      <DependentUpon>addproductype.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\AddVariation.aspx.cs">
+      <DependentUpon>AddVariation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\AddVariation.aspx.designer.cs">
+      <DependentUpon>AddVariation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\CreateMessage.aspx.cs">
+      <DependentUpon>CreateMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\CreateMessage.aspx.designer.cs">
+      <DependentUpon>CreateMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\EditCustomer.aspx.cs">
+      <DependentUpon>EditCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\EditCustomer.aspx.designer.cs">
+      <DependentUpon>EditCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\EditCustomerOther.aspx.cs">
+      <DependentUpon>EditCustomerOther.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\EditCustomerOther.aspx.designer.cs">
+      <DependentUpon>EditCustomerOther.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\EditCustomerTaxDetails.aspx.cs">
+      <DependentUpon>EditCustomerTaxDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\EditCustomerTaxDetails.aspx.designer.cs">
+      <DependentUpon>EditCustomerTaxDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\EditEmp.aspx.cs">
+      <DependentUpon>EditEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\EditEmp.aspx.designer.cs">
+      <DependentUpon>EditEmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\EditProduct.aspx.cs">
+      <DependentUpon>EditProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\EditProduct.aspx.designer.cs">
+      <DependentUpon>EditProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\EditProductAttribute.aspx.cs">
+      <DependentUpon>EditProductAttribute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\EditProductAttribute.aspx.designer.cs">
+      <DependentUpon>EditProductAttribute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\EditProductGallary.aspx.cs">
+      <DependentUpon>EditProductGallary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\EditProductGallary.aspx.designer.cs">
+      <DependentUpon>EditProductGallary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\Gallery.aspx.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\Gallery.aspx.designer.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\GeneralLedger.aspx.cs">
+      <DependentUpon>GeneralLedger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\GeneralLedger.aspx.designer.cs">
+      <DependentUpon>GeneralLedger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\NewEntry.aspx.cs">
+      <DependentUpon>NewEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\NewEntry.aspx.designer.cs">
+      <DependentUpon>NewEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\PreviousEntries.aspx.cs">
+      <DependentUpon>PreviousEntries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\PreviousEntries.aspx.designer.cs">
+      <DependentUpon>PreviousEntries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\PrintEntries.aspx.cs">
+      <DependentUpon>PrintEntries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\PrintEntries.aspx.designer.cs">
+      <DependentUpon>PrintEntries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\ReplyMessage.aspx.cs">
+      <DependentUpon>ReplyMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\ReplyMessage.aspx.designer.cs">
+      <DependentUpon>ReplyMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\Reports\AdminReport.Master.cs">
+      <DependentUpon>AdminReport.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\Reports\AdminReport.Master.designer.cs">
+      <DependentUpon>AdminReport.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\Reports\EditExpenseSheet.aspx.cs">
+      <DependentUpon>EditExpenseSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\Reports\EditExpenseSheet.aspx.designer.cs">
+      <DependentUpon>EditExpenseSheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\Reports\ExpenseSheetReport.aspx.cs">
+      <DependentUpon>ExpenseSheetReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\Reports\ExpenseSheetReport.aspx.designer.cs">
+      <DependentUpon>ExpenseSheetReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\Reports\Invoice.aspx.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\Reports\Invoice.aspx.designer.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\Reports\Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\Reports\Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\Reports\Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\Reports\Report.aspx.designer.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\SelectDivision.aspx.cs">
+      <DependentUpon>SelectDivision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\SelectDivision.aspx.designer.cs">
+      <DependentUpon>SelectDivision.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\Terij.aspx.cs">
+      <DependentUpon>Terij.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\Terij.aspx.designer.cs">
+      <DependentUpon>Terij.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\verify.aspx.cs">
+      <DependentUpon>verify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\verify.aspx.designer.cs">
+      <DependentUpon>verify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewAccounts.aspx.cs">
+      <DependentUpon>ViewAccounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewAccounts.aspx.designer.cs">
+      <DependentUpon>ViewAccounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewCollection.aspx.cs">
+      <DependentUpon>ViewCollection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewCollection.aspx.designer.cs">
+      <DependentUpon>ViewCollection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewCustomer.aspx.cs">
+      <DependentUpon>ViewCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewCustomer.aspx.designer.cs">
+      <DependentUpon>ViewCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewDivisions.aspx.cs">
+      <DependentUpon>ViewDivisions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewDivisions.aspx.designer.cs">
+      <DependentUpon>ViewDivisions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewDSR.aspx.cs">
+      <DependentUpon>ViewDSR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewDSR.aspx.designer.cs">
+      <DependentUpon>ViewDSR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewEmployee.aspx.cs">
+      <DependentUpon>ViewEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewEmployee.aspx.designer.cs">
+      <DependentUpon>ViewEmployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewEmployeeExpenses.aspx.cs">
+      <DependentUpon>ViewEmployeeExpenses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewEmployeeExpenses.aspx.designer.cs">
+      <DependentUpon>ViewEmployeeExpenses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewExpenseSheet.aspx.cs">
+      <DependentUpon>ViewExpenseSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewExpenseSheet.aspx.designer.cs">
+      <DependentUpon>ViewExpenseSheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewFullProduct.aspx.cs">
+      <DependentUpon>ViewFullProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewFullProduct.aspx.designer.cs">
+      <DependentUpon>ViewFullProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewMessages.aspx.cs">
+      <DependentUpon>ViewMessages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewMessages.aspx.designer.cs">
+      <DependentUpon>ViewMessages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewProduct.aspx.cs">
+      <DependentUpon>ViewProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewProduct.aspx.designer.cs">
+      <DependentUpon>ViewProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewSentMessages.aspx.cs">
+      <DependentUpon>ViewSentMessages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\ViewSentMessages.aspx.designer.cs">
+      <DependentUpon>ViewSentMessages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Admin\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Admin\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Clerk\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Clerk\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Marketing\AddEnquiry.aspx.cs">
+      <DependentUpon>AddEnquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Marketing\AddEnquiry.aspx.designer.cs">
+      <DependentUpon>AddEnquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Marketing\BankDetails.aspx.cs">
+      <DependentUpon>BankDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Marketing\BankDetails.aspx.designer.cs">
+      <DependentUpon>BankDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Marketing\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Marketing\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Marketing\Collection.aspx.cs">
+      <DependentUpon>Collection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Marketing\Collection.aspx.designer.cs">
+      <DependentUpon>Collection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Marketing\CreateDSR.aspx.cs">
+      <DependentUpon>CreateDSR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Marketing\CreateDSR.aspx.designer.cs">
+      <DependentUpon>CreateDSR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Marketing\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Marketing\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Marketing\EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Marketing\EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Marketing\ExpenseSheet.aspx.cs">
+      <DependentUpon>ExpenseSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Marketing\ExpenseSheet.aspx.designer.cs">
+      <DependentUpon>ExpenseSheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Marketing\KYCDocument.aspx.cs">
+      <DependentUpon>KYCDocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Marketing\KYCDocument.aspx.designer.cs">
+      <DependentUpon>KYCDocument.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Marketing\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Marketing\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Marketing\ViewCustomer.aspx.cs">
+      <DependentUpon>ViewCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Marketing\ViewCustomer.aspx.designer.cs">
+      <DependentUpon>ViewCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Marketing\ViewDSR.aspx.cs">
+      <DependentUpon>ViewDSR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Marketing\ViewDSR.aspx.designer.cs">
+      <DependentUpon>ViewDSR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Marketing\ViewEmployeeExpenses.aspx.cs">
+      <DependentUpon>ViewEmployeeExpenses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Marketing\ViewEmployeeExpenses.aspx.designer.cs">
+      <DependentUpon>ViewEmployeeExpenses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Marketing\ViewExpenseSheet.aspx.cs">
+      <DependentUpon>ViewExpenseSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Marketing\ViewExpenseSheet.aspx.designer.cs">
+      <DependentUpon>ViewExpenseSheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Marketing\ViewSentMessages.aspx.cs">
+      <DependentUpon>ViewSentMessages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Marketing\ViewSentMessages.aspx.designer.cs">
+      <DependentUpon>ViewSentMessages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\MasterPages\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\MasterPages\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\MasterPages\Clerk.Master.cs">
+      <DependentUpon>Clerk.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\MasterPages\Clerk.Master.designer.cs">
+      <DependentUpon>Clerk.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\MasterPages\Marketing.Master.cs">
+      <DependentUpon>Marketing.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\MasterPages\Marketing.Master.designer.cs">
+      <DependentUpon>Marketing.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Usercontrol\EmployeeProfilePhoto.ascx.cs">
+      <DependentUpon>EmployeeProfilePhoto.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Usercontrol\EmployeeProfilePhoto.ascx.designer.cs">
+      <DependentUpon>EmployeeProfilePhoto.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Usercontrol\SimilarProduct.ascx.cs">
+      <DependentUpon>SimilarProduct.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel\Usercontrol\SimilarProduct.ascx.designer.cs">
+      <DependentUpon>SimilarProduct.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RetrievePassword.aspx.cs">
+      <DependentUpon>RetrievePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RetrievePassword.aspx.designer.cs">
+      <DependentUpon>RetrievePassword.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Common.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Common.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\ErrorMessages.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ErrorMessages.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\GlobalResource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GlobalResource.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Messages.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Messages.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57246</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57246/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,20 @@
+﻿SELECT        tblproductsubtype.intProdSubTypeId, tblproductsubtype.varSubTypeName, tblproducttype.intProdTypeId, tblproducttype.varTypeName, 
+                         tblsuproducts.varProductName, tblsuproducts.varproductcode, tblsuproducts.varShortDesc, tblsuproducts.varLongDesc, tblsuproducts.imgImage, 
+                         tblsuproducts.varStatus, tblsuproducts.varWarning, tblsuproducts.intPurchasePrice, tblsuproducts.intDealerPrice, tblsuproducts.intMRP, tblvariation.intVariationId, 
+                         tblproductvariation.varVariation, tblproductvariation.intId, tblvariation.varVariationValue
+FROM            tblsuproducts INNER JOIN
+                         tblproducttype ON tblsuproducts.intProductTypeId = tblproducttype.intProdTypeId INNER JOIN
+                         tblproductsubtype ON tblsuproducts.intProductSubTypeId = tblproductsubtype.intProdSubTypeId INNER JOIN
+                         tblvariation ON tblsuproducts.intId = tblvariation.intProductId INNER JOIN
+                         tblproductvariation ON tblvariation.intVariationId = tblproductvariation.intId
+
+
+//only product with type and subtype
+
+					SELECT        tblsuproducts.intId, tblsuproducts.varProductName, tblproducttype.varTypeName, tblproductsubtype.varSubTypeName, tblsuproducts.varproductcode, 
+                         tblsuproducts.varShortDesc, tblsuproducts.varLongDesc, tblsuproducts.imgImage, tblsuproducts.varStatus, tblsuproducts.varWarning, 
+                         tblsuproducts.intPurchasePrice, tblsuproducts.intDealerPrice, tblsuproducts.intMRP, tblsuproducts.intProductTypeId, tblsuproducts.intProductSubTypeId
+FROM            tblsuproducts INNER JOIN
+                         tblproducttype ON tblsuproducts.intProductTypeId = tblproducttype.intProdTypeId INNER JOIN
+                         tblproductsubtype ON tblsuproducts.intProductSubTypeId = tblproductsubtype.intProdSubTypeId
+WHERE        (tblsuproducts.intId = 1)

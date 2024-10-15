@@ -1,0 +1,8 @@
+﻿SELECT        cart.bookingdate, cart.status AS cartstatus, cart_products.comments AS Prodcomments, cart_products.quantity, cart_products.varPStatus, cart_transaction.amount, 
+                         cart_transaction.tax, cart_transaction.discount, cart_transaction.recieved, cart_transaction.outstanding, cart_transaction.total, 
+                         cart_transaction.status AS cart_transaction_Status, cart.personnel_id AS cartpersonnel_id, cart.id AS orderId
+FROM            cart_products INNER JOIN
+                         cart ON cart_products.cartid = cart.id INNER JOIN
+                         cart_transaction ON cart.id = cart_transaction.cart_id
+WHERE        (cart.personnel_id = 2)
+GROUP BY cart.id

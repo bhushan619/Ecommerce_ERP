@@ -1,0 +1,325 @@
+﻿<div class="site-menubar">
+    <div class="site-menubar-body">
+      <div>
+        <div>
+          <ul class="site-menu">
+            <li class="site-menu-category">General</li>
+              <li class="site-menu-item ">
+                  <a href="../Admin/Default.aspx" data-dropdown-toggle="false">
+                      <i class="site-menu-icon md-home" aria-hidden="true"></i>
+                      <span class="site-menu-title">Home</span>
+
+                  </a>
+              </li>
+
+                          <li class="site-menu-category">Account</li>
+            <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)" data-dropdown-toggle="false">
+                <i class="site-menu-icon md-apps" aria-hidden="true"></i>
+                <span class="site-menu-title">Account</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                    <li class="site-menu-item">
+                  <a class="animsition-link" href="AddNewDivision.aspx">
+                    <span class="site-menu-title">Create New Division</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="ViewDivisions.aspx">
+                    <span class="site-menu-title">View Previous Division</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="AddNewAccount.aspx">
+                    <span class="site-menu-title">Create New Account</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="ViewAccounts.aspx">
+                    <span class="site-menu-title">View Previous Account</span>
+                  </a>
+                </li>
+            
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="SelectDivision.aspx">
+                    <span class="site-menu-title">Select Division</span>
+                  </a>
+                </li>
+                   <li class="site-menu-item">
+                  <a class="animsition-link" href="GeneralLedger.aspx">
+                    <span class="site-menu-title">General Ledger</span>
+                  </a>
+                </li>
+                   <li class="site-menu-item">
+                  <a class="animsition-link" href="Terij.aspx">
+                    <span class="site-menu-title">Balance Sheet</span>
+                  </a>
+                </li>
+            
+              </ul>
+            </li>
+
+            
+                  <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)" data-dropdown-toggle="false">
+                <i class="site-menu-icon md-star" aria-hidden="true"></i>
+                <span class="site-menu-title">Product</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                   <li class="site-menu-item">
+                  <a class="animsition-link"href="../Admin/AddVariation.aspx">
+                    <span class="site-menu-title">Add Variation </span>
+                  </a>
+                </li>
+                    <li class="site-menu-item">
+                  <a class="animsition-link"href="../Admin/addproductype.aspx">
+                    <span class="site-menu-title">Add Product Type</span>
+                  </a>
+                </li>
+                     <li class="site-menu-item">
+                  <a class="animsition-link"href="../Admin/AddProductSubType.aspx">
+                    <span class="site-menu-title">Add Product SubType</span>
+                  </a>
+                </li>
+                    <li class="site-menu-item">
+                  <a class="animsition-link"href="../Admin/AddProduct.aspx">
+                    <span class="site-menu-title">Add Product </span>
+                  </a>
+                </li>
+                   <li class="site-menu-item">
+                  <a class="animsition-link"href="../Admin/ViewProduct.aspx">
+                    <span class="site-menu-title">view Product </span>
+                  </a>
+                </li>
+                  </ul>
+</li>
+<li class="site-menu-item has-sub">
+              <a href="javascript:void(0)" data-dropdown-toggle="false">
+                <i class="site-menu-icon md-accounts-list" aria-hidden="true"></i>
+                <span class="site-menu-title">Users</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                <li class="site-menu-item has-sub ">
+                  <a href="javascript:void(0)">
+                    <span class="site-menu-title">Employee</span>
+                    <span class="site-menu-arrow"></span>
+                  </a>
+                  <ul class="site-menu-sub">
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="../Admin/AddEmp.aspx">
+                        <span class="site-menu-title">Add Employee</span>
+                      </a>
+                    </li>
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="../Admin/ViewEmployee.aspx">
+                        <span class="site-menu-title">View Employee</span>
+                      </a>
+                    </li>
+                  
+                  </ul>
+                </li>
+                <li class="site-menu-item has-sub ">
+                  <a href="javascript:void(0)">
+                    <span class="site-menu-title">Customers</span>
+                    <span class="site-menu-arrow"></span>
+                  </a>
+                  <ul class="site-menu-sub">
+                        <li class="site-menu-item">
+                      <a class="animsition-link" href="../Admin/AddCustomer.aspx">
+                        <span class="site-menu-title">Add Customers</span>
+                      </a>
+                    </li>
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="../Admin/ViewCustomer.aspx">
+                        <span class="site-menu-title">View Customers</span>
+                      </a>
+                    </li>
+                  
+                  </ul>
+                </li>
+                
+              </ul>
+            </li>
+                                   <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)" data-dropdown-toggle="false">
+                <i class="site-menu-icon md-google-pages" aria-hidden="true"></i>
+                <span class="site-menu-title">Marketing</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                  <li class="site-menu-item  ">
+                      <a class="animsition-link" href="../Admin/ViewCollection.aspx">
+                          <span class="site-menu-title">View Collection</span>
+                       
+                      </a>
+                  </li>
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="../Admin/ViewDSR.aspx">
+                        <span class="site-menu-title">View DSR</span>
+                      </a>
+                    </li>
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="../Admin/ViewExpenseSheet.aspx">
+                        <span class="site-menu-title">View Expense Sheet</span>
+                      </a>
+                    </li>
+                   
+                   </ul>
+      </li>
+                      <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)" data-dropdown-toggle="false">
+                <i class="site-menu-icon md-email" aria-hidden="true"></i>
+                <span class="site-menu-title">Message/Enquiry</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../Admin/CreateMessage.aspx">
+                    <span class="site-menu-title">Compose</span>
+                  </a>
+                </li>
+                   <li class="site-menu-item">
+                  <a class="animsition-link"href="../Admin/ViewMessages.aspx">
+                    <span class="site-menu-title">Inbox/view Message</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../Admin/ViewSentMessages.aspx">
+                    <span class="site-menu-title">View Send Message</span>
+                  </a>
+                </li>
+               
+              </ul>
+            </li>
+                          <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)" data-dropdown-toggle="false">
+                <i class="site-menu-icon md-google-pages" aria-hidden="true"></i>
+                <span class="site-menu-title">Orders</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                  <li class="site-menu-item  ">
+                      <a class="animsition-link" href="#">
+                          <span class="site-menu-title">New Orders</span>
+                       
+                      </a>
+                  </li>
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="#">
+                        <span class="site-menu-title">View Orders</span>
+                      </a>
+                    </li>
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="#">
+                        <span class="site-menu-title">Payment</span>
+                      </a>
+                    </li>
+                   
+                   </ul>
+      </li>
+                          <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)" data-dropdown-toggle="false">
+                <i class="site-menu-icon md-settings" aria-hidden="true"></i>
+                <span class="site-menu-title">Setting</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                  <li class="site-menu-item">
+                  <a class="animsition-link" href="../Admin/AccountForSolar.aspx">
+                    <span class="site-menu-title">Account For Solar</span>
+                  </a>
+                </li>
+               <li class="site-menu-item">
+                  <a class="animsition-link" href="../Admin/Gallery.aspx">
+                    <span class="site-menu-title">Gallery</span>
+                  </a>
+                </li>
+                   <li class="site-menu-item">
+                  <a class="animsition-link" href="../Admin/EditProfile.aspx">
+                    <span class="site-menu-title">Edit Profile</span>
+                  </a>
+                </li>
+                   <li class="site-menu-item">
+                  <a class="animsition-link" href="../Admin/ChangePassword.aspx">
+                    <span class="site-menu-title">Change Password</span>
+                  </a>
+                </li>
+                     <li class="site-menu-item">
+                  <a class="animsition-link" href="../Admin/logout.aspx">
+                    <span class="site-menu-title">Logout</span>
+                  </a>
+                </li>
+              <%--  <li class="site-menu-item">
+                  <a class="animsition-link" href="../Admin/AddCustomer.aspx">
+                    <span class="site-menu-title">AddCustomer</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link"href="../Admin/AddEmp.aspx">
+                    <span class="site-menu-title">AddEmp</span>
+                  </a>
+                </li>
+                     <li class="site-menu-item">
+                  <a class="animsition-link"href="../Admin/ViewCustomer.aspx">
+                    <span class="site-menu-title">ViewCustomer</span>
+                  </a>
+                </li>
+                     <li class="site-menu-item">
+                  <a class="animsition-link"href="../Admin/ViewEmployee.aspx">
+                    <span class="site-menu-title">ViewEmployee</span>
+                  </a>
+                </li>--%>
+                     
+              </ul>
+            </li>
+     
+            <li class="site-menu-category">Report</li>
+            <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)" data-dropdown-toggle="false">
+                <i class="site-menu-icon md-folder" aria-hidden="true"></i>
+                <span class="site-menu-title">Report</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../Admin/ExpenseSheetReport.aspx">
+                    <span class="site-menu-title">Expense Sheet Reoprt</span>
+                  </a>
+                </li>
+                  </ul>
+                </li>
+            <li class="site-menu-category">Apps</li>
+            <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)" data-dropdown-toggle="false">
+                <i class="site-menu-icon md-apps" aria-hidden="true"></i>
+                <span class="site-menu-title">Apps</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../Admin/Reports/Report.aspx">
+                    <span class="site-menu-title">Contacts</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="#">
+                    <span class="site-menu-title">Calendar</span>
+                  </a>
+                </li>
+            
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="#">
+                    <span class="site-menu-title">Projects</span>
+                  </a>
+                </li>
+            
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
